@@ -1,0 +1,15 @@
+{
+  "name": "ux-designer-marketplace",
+  "interface": { "displayName": "UX Designer" },
+  "plugins": [
+    {
+      "name": "ux-designer",
+      "source": { "source": "local", "path": "./" },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

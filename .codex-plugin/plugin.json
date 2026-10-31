@@ -1,0 +1,17 @@
+{
+  "name": "ux-designer",
+  "version": "0.1.0",
+  "description": "Plan and improve content, navigation, task flows, and interaction states for websites, web apps, iOS, and Android.",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "UX Designer",
+    "shortDescription": "Design clearer interfaces",
+    "longDescription": "A coordinated set of six skills that inspects your materials, clarifies the task in plain language, plans the interface, implements authorized changes, and checks the result.",
+    "developerName": "ruslanovich",
+    "category": "Productivity",
+    "websiteURL": "https://github.com/ruslanovich/ux-designer",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "defaultPrompt": "Use $ux-designer:design-interface to improve content, navigation, and task flows in this project."
+  }
+}

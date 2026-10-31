@@ -1,0 +1,13 @@
+{
+  "name": "ux-designer",
+  "version": "0.1.0",
+  "description": "Plan and improve content, navigation, task flows, and interaction states for websites, web apps, iOS, and Android.",
+  "author": {
+    "name": "ruslanovich",
+    "url": "https://github.com/ruslanovich"
+  },
+  "homepage": "https://github.com/ruslanovich/ux-designer",
+  "repository": "https://github.com/ruslanovich/ux-designer",
+  "license": "MIT",
+  "keywords": ["ux", "information-architecture", "interface-design", "navigation", "agent-skills"]
+}

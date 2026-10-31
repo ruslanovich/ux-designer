@@ -1,0 +1,9 @@
+interface:
+  display_name: "Check Interface"
+  short_description: "Check user flows and explain what was verified"
+  default_prompt: "Use $check-interface to verify the interface against its intended tasks and explain the findings."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+
+policy:
+  allow_implicit_invocation: false

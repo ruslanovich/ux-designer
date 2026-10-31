@@ -1,0 +1,9 @@
+interface:
+  display_name: "Design Interface"
+  short_description: "Plan content and flows, then build and verify interfaces"
+  default_prompt: "Use $design-interface to plan and implement an interface from my idea or materials."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+
+policy:
+  allow_implicit_invocation: true

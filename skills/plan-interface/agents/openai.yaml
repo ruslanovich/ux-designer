@@ -1,0 +1,9 @@
+interface:
+  display_name: "Plan Interface"
+  short_description: "Design content, navigation, flows, and states"
+  default_prompt: "Use $plan-interface to plan the content, navigation, and user flows for my interface."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+
+policy:
+  allow_implicit_invocation: false

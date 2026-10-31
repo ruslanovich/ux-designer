@@ -1,0 +1,16 @@
+{
+  "name": "ux-designer-marketplace",
+  "owner": { "name": "ruslanovich" },
+  "metadata": {
+    "description": "The official UX Designer skill package.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "ux-designer",
+      "source": "./",
+      "version": "0.1.0",
+      "description": "Plan and improve content, navigation, task flows, and interaction states."
+    }
+  ]
+}

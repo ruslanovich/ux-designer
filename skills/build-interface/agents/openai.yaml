@@ -1,0 +1,9 @@
+interface:
+  display_name: "Build Interface"
+  short_description: "Implement the chosen interface structure and behavior"
+  default_prompt: "Use $build-interface to implement the prepared interface plan."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+
+policy:
+  allow_implicit_invocation: false
