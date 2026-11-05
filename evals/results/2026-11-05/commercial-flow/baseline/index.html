@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Work orders · Service Desk</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="model.js" defer></script>
+  <script src="triage.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to work orders</a>
+  <header class="site-header">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">SD</span><span>Service Desk<small>Operations</small></span></div>
+    <div class="actor-controls">
+      <label for="role">Demo role<select id="role"><option value="dispatcher">Dispatcher</option><option value="technician">Technician</option><option value="admin">Admin</option></select></label>
+      <label id="viewer-field" for="viewer" hidden>Demo technician<select id="viewer"><option>Lee</option><option>Sam</option></select></label>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <div class="page-heading">
+      <div><p class="eyebrow">Operations / Work orders</p><h1 id="page-title">Work orders</h1><p id="page-description">Review incoming work and assign the next technician.</p></div>
+      <button id="export" class="secondary" hidden>Export all work orders</button>
+    </div>
+    <p class="demo-note"><span class="demo-dot" aria-hidden="true"></span>Demo workspace. Changes and saved views last until this page is refreshed.</p>
+    <p id="role-note" class="role-note" hidden></p>
+
+    <section class="queue" aria-labelledby="queue-title">
+      <div class="queue-heading"><h2 id="queue-title">Work-order queue</h2><span id="total-count" class="muted"></span></div>
+      <div class="filter-toolbar">
+        <div class="search-field"><label for="query">Search work orders</label><input type="search" id="query" placeholder="Order number, title, or customer" autocomplete="off"></div>
+        <div class="view-field"><label for="views">Saved view</label><select id="views"><option value="">Choose a saved view</option></select></div>
+        <details id="save-view-panel" class="save-view-panel"><summary>Save current view</summary><form id="save-view-form" novalidate><label for="view-name">View name</label><input id="view-name" aria-describedby="view-help view-error" placeholder="e.g. Acme waiting"><p id="view-help" class="field-help">Saves this search and status. An existing name replaces that view.</p><p id="view-error" class="field-error"></p><button class="primary" type="submit">Save view</button></form></details>
+      </div>
+      <div class="status-filters" role="group" aria-label="Filter work orders by status">
+        <button type="button" data-status="all" aria-pressed="true">All work <span id="count-all">0</span></button>
+        <button type="button" data-status="new" aria-pressed="false">New <span id="count-new">0</span></button>
+        <button type="button" data-status="waiting" aria-pressed="false">Waiting <span id="count-waiting">0</span></button>
+        <button type="button" data-status="scheduled" aria-pressed="false">Scheduled <span id="count-scheduled">0</span></button>
+        <button type="button" data-status="draft" aria-pressed="false">Draft <span id="count-draft">0</span></button>
+      </div>
+      <div class="result-summary"><p id="filter-summary" role="status" aria-live="polite"></p><button id="clear-filters" type="button" class="text-button" hidden>Clear filters</button></div>
+      <div class="table-region" role="region" aria-label="Work orders; scroll horizontally on narrow screens" tabindex="0">
+        <table>
+          <caption class="sr-only">Work orders matching the current search and status</caption>
+          <thead><tr><th scope="col" id="selection-heading"><input id="select-visible" type="checkbox" aria-label="Select all visible work orders"></th><th scope="col">Work order</th><th scope="col">Customer</th><th scope="col">Status</th><th scope="col">Due</th><th scope="col">Technician</th><th scope="col"><span class="sr-only">Details</span></th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+      <div id="empty-state" class="empty-state" hidden><h3 id="empty-title">No work orders match</h3><p id="empty-description">Try another search or status.</p><button id="empty-clear" class="secondary">Clear filters</button></div>
+    </section>
+
+    <section id="assignment-area" class="assignment-area" aria-labelledby="assignment-title">
+      <div class="assignment-top"><div><h2 id="assignment-title">Assign work</h2><p id="selection-summary" aria-live="polite">Select work orders from the queue.</p></div><button id="clear-selection" class="text-button" disabled>Clear selection</button></div>
+      <details id="selected-review" hidden><summary id="selected-review-label">Review selected work orders</summary><ul id="selected-list"></ul></details>
+      <form id="assignment-form" class="assignment-form" novalidate>
+        <div class="technician-field"><label for="technician">Assign to technician</label><select id="technician" aria-describedby="assignment-help technician-error"><option value="">Choose a technician</option><option>Lee</option><option>Sam</option></select><p id="technician-error" class="field-error"></p></div>
+        <button id="assign" type="submit" class="primary" disabled>Assign selected</button>
+      </form>
+      <p id="assignment-help" class="field-help">Assignment sets work to Scheduled and adds a history entry. Drafts must be completed before they can be assigned.</p>
+    </section>
+
+    <section id="feedback" class="feedback" role="status" aria-live="polite" aria-atomic="true" hidden><h2 id="feedback-title" tabindex="-1"></h2><ul id="feedback-items"></ul></section>
+    <footer class="page-footer"><span>Service Desk · Local dispatch prototype</span><span id="permission-summary">Dispatcher access</span></footer>
+  </main>
+
+  <dialog id="detail-dialog" aria-labelledby="detail-title">
+    <div class="dialog-heading"><p id="detail-id" class="eyebrow"></p><button id="close-detail" class="secondary" type="button" aria-label="Close work-order details">Close</button></div>
+    <h2 id="detail-title" tabindex="-1"></h2>
+    <dl id="detail-fields" class="detail-fields"></dl>
+    <p id="draft-note" class="draft-note" hidden>Complete this draft before assignment. Draft completion is outside this prototype; its details and history remain available here.</p>
+    <section class="history-section" aria-labelledby="history-title"><h3 id="history-title">History</h3><ol id="detail-history" class="history-list"></ol></section>
+    <div class="dialog-footer"><button id="detail-select" class="primary" type="button">Select and return to queue</button><button id="return-to-queue" class="secondary" type="button">Return to queue</button></div>
+  </dialog>
+  <noscript><p class="noscript">JavaScript is required to use this local work-order prototype.</p></noscript>
+</body>
+</html>

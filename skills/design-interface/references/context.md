@@ -6,15 +6,17 @@ Use this contract when entering the workflow, handing off a module, or revising 
 
 | Field | Record only what matters |
 |---|---|
-| brief | Goal, audience, platform, requested scope and endpoint, material constraints |
-| evidence | An identifier if needed, statement, status, and source or reason |
-| content | Required information, entities, functions, relationships, and material gaps |
+| brief | Goal, audience, platform, requested endpoint, chosen change scope and reason, explicit boundaries |
+| evidence | Statement, status, source or reason, inspected conditions, relevant coverage and research limits |
+| content | Required information, entities, functions, permissions, relationships, and preservation constraints |
 | tasks | Starting circumstance, actions, result, and significant exceptions |
-| decisions | Choice, reason, alternatives when relevant, and dependencies |
-| checks | Expected result, method, conditions, observation, and status |
+| decisions | Coherent direction, choices, reasons, consequential alternatives, research effects, and dependencies |
+| checks | Original problem or preserved capability, expected result, method, conditions, observation, and status |
 | next | Owning module, specific question or action, and why it matters |
 
 Use stable identifiers only where they help connect a decision to evidence or a check. Leave absent information unknown or omit it. Do not expand a small edit into a full product inventory.
+
+The agent maintains this record. Topic coverage and research notes are not extra user questionnaires or mandatory documents. Retain only findings, sources, and decisions that matter to the next action. A broad redesign includes important visual decisions; a requested endpoint remains independent of its change scope. [R37–R40]
 
 ## Evidence status
 
@@ -25,6 +27,8 @@ Use stable identifiers only where they help connect a decision to evidence or a 
 - `unknown`: Information not established. Explain only consequential gaps.
 
 Keep the status on substantive statements; a brief can contain more than one status. A client's target-audience choice is a decision, while assumptions about that audience remain hypotheses. An agent-generated journey does not reveal actual emotions, habits, or pain points. [R02–R03]
+
+A professional publication supports what its author found or recommends under the reported conditions. Carry its source type, applicability, and limitations with the resulting design decision. Reading a case study does not establish the same audience behavior in this product. Reuse previously read evidence when it still answers the question. [R40]
 
 ## Checks and expected checks
 

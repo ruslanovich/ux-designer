@@ -1,6 +1,8 @@
 # Installation and updates
 
-Install UX Designer once for your local user to use it across projects. The package contains six cooperating skills; keep them together. Choose either a plugin installation or standalone skills for each client.
+Install UX Designer once for your local user to use it across projects. The package contains seven cooperating skills; keep them together. Choose either a plugin installation or standalone skills for each client.
+
+> **Unreleased 0.2.0 candidate:** the remote marketplace and default-branch clone commands in this guide install the published `main` release, currently 0.1.0 with six skills. Use [the candidate instructions](evaluation-report.md#trying-the-candidate) to test the seven-skill branch.
 
 ## Claude Code plugin
 
@@ -90,7 +92,7 @@ Preview an installation:
 python3 scripts/install.py --target both --dry-run
 ```
 
-Open a new conversation in the client after installation if its skill list has not refreshed. All six folders are copied into the destination. The installer does not create links back into the plugin repository.
+Open a new conversation in the client after installation if its skill list has not refreshed. All seven folders are copied into the destination. The installer does not create links back into the plugin repository.
 
 ### Update
 
@@ -102,6 +104,8 @@ python3 scripts/install.py --target codex
 ```
 
 Use the same target you installed originally. The installer checks every selected destination before replacing any skill and records file hashes to detect local changes. An interrupted replacement is rolled back when possible; if recovery needs manual action, the command reports where backups remain.
+
+Updating from 0.1.0 adds `research-interface` alongside the existing six modules. If a destination with that name already belongs to another installation, or an existing UX Designer skill has local edits, the installer stops before replacing any selected skill. Resolve the reported conflict and rerun the update.
 
 ### Remove
 
@@ -119,7 +123,7 @@ The ownership record is `.ux-designer-install.json` inside each installed skill 
 
 ### Manual installation
 
-You can copy the six directories inside `skills/` into your client's user-level skills directory yourself. Each destination must have the shape `<skills-directory>/design-interface/SKILL.md`, with the other five modules next to it. Preserve `references/`, `scripts/`, `agents/`, and `assets/`.
+You can copy the seven directories inside `skills/` into your client's user-level skills directory yourself. Each destination must have the shape `<skills-directory>/design-interface/SKILL.md`, with the other six modules next to it. Preserve `references/`, `scripts/`, `agents/`, and `assets/`.
 
 Manual copies are managed manually. The provided installer will not claim ownership of them. Copy the directories as actual files; linking them into this plugin repository can cause a client to apply the plugin's namespace.
 
@@ -135,12 +139,14 @@ The main skill handles the workflow. Specialists are also available by their own
 ## Troubleshooting
 
 - **A skill appears twice:** remove the duplicate installation method for that client. Repository-level skills may also duplicate a user-level installation.
-- **A module is missing:** ensure all six skills were installed together. From the checkout, run `python3 scripts/validate.py` after installing the development dependency, or run the installed coordinator's `scripts/locate_modules.py` directly with Python 3.
+- **A module is missing:** ensure all seven skills were installed together. From the checkout, run `python3 scripts/validate.py` after installing the development dependency, or run the installed coordinator's `scripts/locate_modules.py` directly with Python 3.
 - **A marketplace is missing:** run the matching `marketplace add` command before installing the plugin. Both catalogs are in this repository.
 - **A skill is unavailable:** check the client's skill/plugin settings and any applicable workspace policy. Disabled modules should remain disabled until you choose to enable them.
 - **A script is blocked:** allow only the operations required for your task through the client's normal permissions. Module instructions can be read directly if the helper is unavailable.
 
 Global installation applies to this local user and computer. Other machines and cloud sessions need their own supported installation setup. UX Designer itself has no server, account signup, or API key; the selected coding agent retains its own requirements.
+
+Research uses the search and source-reading tools exposed by that agent. The skill cannot enable browsing by itself. If browsing or interface rendering is unavailable, it should explain the relevant limitation and continue with the available materials.
 
 ## Official client documentation
 

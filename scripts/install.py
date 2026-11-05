@@ -14,7 +14,7 @@ from pathlib import Path
 
 SKILLS = (
     "design-interface", "inspect-interface", "clarify-interface",
-    "plan-interface", "build-interface", "check-interface",
+    "research-interface", "plan-interface", "build-interface", "check-interface",
 )
 OWNER = "https://github.com/ruslanovich/ux-designer"
 MARKER = ".ux-designer-install.json"
@@ -223,7 +223,7 @@ def install(args: argparse.Namespace) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--target", required=True, choices=("codex", "claude", "both"),
-                        help="Install all six skills for the selected local client(s).")
+                        help="Install all seven skills for the selected local client(s).")
     parser.add_argument("--home", type=Path, default=Path.home(),
                         help="Home directory containing .agents and/or .claude (default: your home).")
     parser.add_argument("--uninstall", action="store_true",

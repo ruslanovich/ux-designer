@@ -1,7 +1,7 @@
 interface:
   display_name: "Design Interface"
-  short_description: "Plan content and flows, then build and verify interfaces"
-  default_prompt: "Use $design-interface to plan and implement an interface from my idea or materials."
+  short_description: "Research, design, build, and verify coherent interfaces"
+  default_prompt: "Use $design-interface to design or redesign my interface, choose the needed depth, and complete the requested work."
   icon_small: "assets/icon.svg"
   icon_large: "assets/icon.svg"
 

@@ -11,6 +11,7 @@ from pathlib import Path
 MODULES = (
     "inspect-interface",
     "clarify-interface",
+    "research-interface",
     "plan-interface",
     "build-interface",
     "check-interface",
@@ -70,7 +71,7 @@ def main() -> int:
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[2],
                         help="Actual containing skills directory; defaults to this installation.")
     parser.add_argument("names", nargs="*", choices=(*MODULES, "design-interface"),
-                        help="Exact skill names; default: the five workflow modules.")
+                        help="Exact skill names; default: the six workflow modules.")
     args = parser.parse_args()
     root = args.root.expanduser().resolve()
     if not root.is_dir():

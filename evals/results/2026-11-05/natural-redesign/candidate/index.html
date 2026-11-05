@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#254c3e">
+  <title>Reading list · My Reading</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to reading list</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 6c-3-2-6-2-9-1v14c3-1 6-1 9 1 3-2 6-2 9-1V5c-3-1-6-1-9 1Z"/><path d="M12 6v14"/></svg>
+        </span>
+        <span>My Reading</span>
+      </div>
+      <p class="storage-state" id="storage-state">Saves in this browser</p>
+    </div>
+  </header>
+
+  <main id="main-content" class="workspace" tabindex="-1">
+    <div id="storage-warning" class="storage-warning" hidden>
+      <p id="storage-warning-text" role="alert"></p>
+      <button id="retry-save" type="button" class="button button-secondary" hidden>Try saving again</button>
+    </div>
+
+    <div class="page-intro">
+      <div>
+        <p class="eyebrow">Your personal library</p>
+        <h1 id="heading" tabindex="-1">Reading list</h1>
+        <p id="view-description" class="description">Books and long articles to come back to.</p>
+      </div>
+      <button type="button" id="open-add" class="button button-primary" aria-expanded="false" aria-controls="add-panel">
+        <span aria-hidden="true" class="plus">+</span> Add a read
+      </button>
+    </div>
+
+    <div class="collection-switcher" role="group" aria-label="Reading collections">
+      <button type="button" id="active" class="collection-button" aria-pressed="true">
+        Reading list <span id="active-count" class="count-badge" aria-hidden="true">0</span>
+      </button>
+      <button type="button" id="archive" class="collection-button" aria-pressed="false">
+        Archive <span id="archive-count" class="count-badge" aria-hidden="true">0</span>
+      </button>
+    </div>
+
+    <section id="add-panel" class="add-panel" aria-labelledby="add-heading" hidden>
+      <div class="section-intro">
+        <h2 id="add-heading">Save your next read</h2>
+        <p>New items go to your reading list with the status “To read”.</p>
+      </div>
+      <form id="add" novalidate>
+        <div class="form-fields">
+          <div class="field">
+            <label for="title">Title <span class="required-label">(required)</span></label>
+            <input id="title" name="title" type="text" required autocomplete="off" placeholder="A book or article title" aria-describedby="notice">
+            <p id="notice" class="field-error" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="author">Author <span class="optional-label">(optional)</span></label>
+            <input id="author" name="author" type="text" autocomplete="off" placeholder="Who wrote it?">
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="button button-primary">Add to list</button>
+          <button type="button" id="cancel-add" class="button button-quiet">Cancel</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="collection" aria-labelledby="heading">
+      <div class="collection-tools">
+        <div class="search-row">
+          <div class="search-field">
+            <label for="search" id="search-label">Search reading list</label>
+            <div class="search-control">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>
+              <input id="search" type="search" placeholder="Title or author" autocomplete="off" aria-controls="cards">
+              <button type="button" id="clear-search" class="clear-search" aria-label="Clear search" hidden>Clear</button>
+            </div>
+          </div>
+          <p id="count" class="results-count" role="status" aria-atomic="true"></p>
+        </div>
+        <div class="status-filters" role="group" aria-label="Filter by reading status">
+          <button type="button" id="filter-all" class="filter-button" aria-pressed="true">All <span id="filter-count-all" aria-hidden="true">0</span></button>
+          <button type="button" id="filter-queued" class="filter-button" aria-pressed="false"><span class="status-dot queued" aria-hidden="true"></span>To read <span id="filter-count-queued" aria-hidden="true">0</span></button>
+          <button type="button" id="filter-reading" class="filter-button" aria-pressed="false"><span class="status-dot reading" aria-hidden="true"></span>Reading <span id="filter-count-reading" aria-hidden="true">0</span></button>
+          <button type="button" id="filter-finished" class="filter-button" aria-pressed="false"><span class="status-dot finished" aria-hidden="true"></span>Finished <span id="filter-count-finished" aria-hidden="true">0</span></button>
+        </div>
+      </div>
+
+      <ul id="cards" class="reading-list"></ul>
+      <div id="empty-state" class="empty-state" hidden>
+        <span class="empty-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg>
+        </span>
+        <h2 id="empty-heading"></h2>
+        <p id="empty-description"></p>
+        <button type="button" id="empty-action" class="button button-secondary"></button>
+      </div>
+    </section>
+
+    <div id="feedback" class="feedback" hidden>
+      <p id="message" role="status" aria-atomic="true"></p>
+      <button type="button" id="undo" class="button button-secondary" hidden>Undo</button>
+    </div>
+
+    <footer class="page-footer">
+      <p>A little reading, at your own pace.</p>
+      <p>Personal collection · on this device</p>
+    </footer>
+    <noscript><p class="storage-warning">Turn on JavaScript to manage your reading list.</p></noscript>
+  </main>
+  <script src="model.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

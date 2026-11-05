@@ -2,7 +2,7 @@
 
 Use this index to find the relevant knowledge owner. Resolve a module's skill name within the same installed plugin when applicable, retaining the namespace supplied by the host catalog; interpret a reference path relative to that module's resolved directory. Do not create sibling paths from names. Read the needed topic, not the entire index's target set.
 
-R01–R36 retain the agreed rule identifiers. The system's workflow rules are project requirements or operational decisions. Pattern guidance is conditional; platform conventions and normative accessibility criteria have their own stated scope.
+R01–R36 retain their identifiers. R37–R41 extend scope, coverage, visual planning, research, and concept review. Workflow rules are project requirements or operational decisions. Pattern guidance is conditional; platform conventions and normative accessibility criteria have their own stated scope.
 
 | Rules | Topic | Owner and reference |
 |---|---|---|
@@ -42,7 +42,12 @@ R01–R36 retain the agreed rule identifiers. The system's workflow rules are pr
 | R34 | Match research to its question | `check-interface` references/evidence-and-routing.md |
 | R35 | Bound claims by evidence | `check-interface` references/evidence-and-routing.md |
 | R36 | Correct the relevant cause | `design-interface` references/routing.md; `check-interface` |
+| R37 | Choose depth and complete the requested endpoint | `design-interface` references/redesign-depth.md |
+| R38 | Scan applicable quality before narrowing diagnosis | `inspect-interface` references/quality-coverage.md |
+| R39 | Plan coherent visual organization | `plan-interface` references/visual-design.md |
+| R40 | Research professional evidence for the current decision | `research-interface` references/research-method.md |
+| R41 | Review the concept against the original task | `check-interface` references/checks.md |
 
-Consult the source links and limitations beside the applied rule. They explain its basis; they do not make every recommendation universal. Verify current primary platform documentation when the target version, implementation detail, or precise normative criterion matters. Use sources for the relevant decision rather than requiring new broad research before ordinary design work.
+Consult the source links and limitations beside the applied rule. They explain its basis; they do not make every recommendation universal. Verify current primary platform documentation when the target version, implementation detail, or precise normative criterion matters. For broad redesign or unfamiliar domains, use bounded research orientation and reuse equivalent sources already read. For routine local work, research only consequential gaps or an explicit request. Do not limit discovery to this corpus. [R40]
 
 The practitioner survey on journey-mapping practice remains background material; it does not supply a prescriptive rule. Detailed statistical-visualization decisions and intensive expert workflows may need targeted evidence beyond the introductory sources.

@@ -1,7 +1,7 @@
 interface:
   display_name: "Plan Interface"
-  short_description: "Design content, navigation, flows, and states"
-  default_prompt: "Use $plan-interface to plan the content, navigation, and user flows for my interface."
+  short_description: "Plan coherent structure, interactions, and visual design"
+  default_prompt: "Use $plan-interface to design the content, structure, interactions, visual direction, and key states for my interface."
   icon_small: "assets/icon.svg"
   icon_large: "assets/icon.svg"
 

@@ -1,6 +1,6 @@
 # Conditional checks
 
-Select only checks relevant to the question, accepted plan, change, and available evidence. Use the rule IDs to trace a finding; do not turn this reference into a mandatory audit. Treat platform guidance as scoped guidance, not proof that an organization is best for its audience.
+Select checks relevant to the original task, review question, chosen design, and available evidence. Use the rule IDs to trace a finding; do not turn a local check into a mandatory audit. Treat platform guidance as scoped guidance, not proof that an organization is best for its audience.
 
 ## Project and implementation
 
@@ -12,9 +12,25 @@ Frame the task through a goal and circumstances rather than instructions that re
 
 Use [Turn User Goals into Task Scenarios for Usability Testing](https://www.nngroup.com/articles/task-scenarios-usability-testing/) for scenario framing. Treat the agent walkthrough as our process.
 
+### R41 — Review concept quality
+
+Before substantial implementation, or when reviewing whether a redesign solved its task, assess the chosen concept independently of implementation fidelity. Reuse prior inspection and research rather than starting a full audit again.
+
+- Trace the original priority problems to concrete decisions in the design. Identify an unresolved central problem even when the implementation faithfully follows the plan.
+- Check that the chosen depth can address those problems. Consider related screens and dependencies when a local change leaves the cause intact; respect an explicitly limited request.
+- Review the coherence of content, organization, interaction, visual hierarchy, density, component treatment, and relevant use conditions. Name a specific gap or strength in the available artifact; merely listing design topics is insufficient.
+- Verify representation of required information, roles, permissions, states, and necessary expert or infrequent operations. Clean appearance does not justify losing a required capability.
+- Check whether the key screens and significant states are concrete enough for the requested handoff. Keep missing evidence or an unrendered visual treatment unverified.
+
+For example, a design that hides partial failures can prevent operators from knowing which records need correction. Matching that design in code does not resolve the original task. Send the issue to planning, with the affected step and evidence. If a professional recommendation needs investigation, send that question to research.
+
+Treat this concept review as our operational requirement and an expert judgment. It does not establish audience usability or commercial impact. A minor correction may need only a brief check of the affected decision.
+
+[Jenny Xie, Our approach to designing UI3, Figma (2024)](https://www.figma.com/blog/our-approach-to-designing-ui3/) describes revisiting floating panels and blend-mode visibility after feedback exposed problems in working conditions. This practitioner case illustrates revisability; it does not prescribe one panel layout for all products.
+
 ### R31 and R33 — Implementation correspondence
 
-Compare implemented content, actions, transitions, and material states with the accepted plan. Execute the affected path when a runtime is accessible; otherwise identify only statically inspectable differences. Distinguish a real operation from a stub, simulated response, or demonstration dataset.
+Compare implemented content, actions, transitions, material states, and visual organization with the chosen design. Execute the affected path and inspect the rendered result when accessible; otherwise identify only properties exposed by the supplied artifacts. Distinguish a real operation from a stub, simulated response, or demonstration dataset. Keep correspondence separate from the concept-quality judgment under R41.
 
 Send an implementation constraint that changes the interaction back to the affected decision. Check the revised expectation rather than silently treating an implementation shortcut as the new plan. Apply the following checks only where they affect the path.
 
