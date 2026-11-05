@@ -275,7 +275,7 @@ class InstallerTest(unittest.TestCase):
         def fail_once(path, target):
             nonlocal failed
             if (path.name == "check-interface" and path.parent.name == "new"
-                    and self.target("claude") in path.parents and not failed):
+                    and self.target("claude").resolve() in path.parents and not failed):
                 failed = True
                 raise OSError("Simulated interrupted migration")
             return original_rename(path, target)
