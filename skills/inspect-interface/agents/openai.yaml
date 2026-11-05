@@ -1,7 +1,7 @@
 interface:
   display_name: "Inspect Interface"
-  short_description: "Extract content, capabilities, and constraints"
-  default_prompt: "Use $inspect-interface to inspect my materials and identify content, capabilities, and constraints."
+  short_description: "Inspect structure, visual quality, and capabilities"
+  default_prompt: "Use $inspect-interface to examine my interface or materials, identify important design problems, and recommend the appropriate scope."
   icon_small: "assets/icon.svg"
   icon_large: "assets/icon.svg"
 

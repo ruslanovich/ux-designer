@@ -8,22 +8,26 @@ Read this reference when choosing a partial route, handling a missing module, or
 |---|---|
 | Raw idea, create a product | Form an initial task; clarify consequential gaps; plan; build; check |
 | Content notes, create a landing page | Inspect meaning and claims; clarify missing decisions; organize content; build; check |
-| Existing product, improve structure | Inspect required capabilities and problematic paths; clarify relevant goals; plan changes; build; check |
+| Existing product, broad redesign | Scan applicable quality and required capabilities; orient with professional research; choose depth; clarify consequential goals; plan a coherent direction; review concept; build and check within the endpoint |
+| Small correction or visual-only request | Inspect the affected area and material dependencies; resolve the requested design; build and check if authorized |
 | References or fragments | Inspect the wanted interaction and its context; reconcile references; continue the requested route |
-| Audit only | Inspect; clarify only if needed; check available evidence; report findings and possible changes |
-| Plan only | Inspect available material; clarify if needed; plan; check plan coherence; deliver the plan |
+| Audit only | Inspect applicable areas; research consequential gaps; clarify only if needed; report prioritized findings and recommended scope |
+| Plan only | Inspect available material; clarify and research where needed; resolve content, interactions, and visual direction; review concept; deliver the plan |
 | Implement an existing plan | Check the plan against the current request and evidence; fill only material gaps; build; check |
 | Verify an existing result | Recover its intended task and acceptance conditions; inspect or run what is accessible; check and report |
 
 An empty materials list does not trigger a collection assignment. Skip inspection when there is nothing useful to inspect. Skip further interview when the known context is sufficient. A module can be used again for a new local gap; do not restart the whole route.
 
+Research is callable from inspection, planning, and checking. Start a bounded orientation for broad redesign or unfamiliar domains unless equivalent sources have already been read in context. Use targeted research for consequential gaps, competing patterns, or current platform questions. It returns the question, read sources, applicability, decision effects, and remaining uncertainty. Missing browsing limits the evidence; continue feasible work without claiming new research. [R40]
+
 ## Phase exits
 
-- **Inspection:** Relevant content, capabilities, reference intent, and observed limitations are captured.
+- **Inspection:** Applicable quality areas, strengths, problems, required capabilities, reference intent, and observation limits support a scope recommendation.
 - **Clarification:** The next decision is supportable, with remaining assumptions visible.
-- **Planning:** Required content has a place; the path can reach the result; significant states and expected checks are described.
+- **Research:** Relevant sources have informed a diagnosis or decision; applicability, limits, and the next check are clear enough to proceed.
+- **Planning:** A coherent direction resolves representative screens, content, paths, visual organization, significant states, and checks against the original problems.
 - **Implementation:** Authorized changes implement the chosen plan; any consequential divergence is reflected back in the plan.
-- **Verification:** Applicable checks have recorded observations or explicit limits; concrete findings have owners.
+- **Verification:** Concept quality and applicable implementation checks have observations or explicit limits; concrete findings have owners.
 
 These are readiness judgments, not mandatory user approval checkpoints. Continue when authorized. Respect any user-specified stop point or staged approval.
 
@@ -33,11 +37,12 @@ These are readiness judgments, not mandatory user approval checkpoints. Continue
 |---|---|---|
 | Missing or contradictory product goal, audience, priority, or required content | `clarify-interface` | The specific ambiguity and how the answer changes the next decision |
 | Unavailable or misunderstood material | `inspect-interface` | The needed artifact or observed inconsistency |
-| Incomplete grouping, information, path, or state | `plan-interface` | The broken task and relevant evidence |
+| Missing professional evidence, conflicting guidance, or a consequential pattern question | `research-interface` | The question, context, sources already read, and decision at stake |
+| Inadequate scope, grouping, information, path, state, or visual direction | `plan-interface` | The original problem, required capabilities, and relevant evidence |
 | Working behavior differs from the chosen plan | `build-interface` | Expected result, conditions, actual result, and affected decision |
 | Unsupported conclusion or wrong checking method | `check-interface` | The claim and available evidence |
 
-Once repaired, revisit only affected tasks and material dependencies. If a question cannot currently be resolved, keep a bounded result with an explicit limitation. Do not invent a passing check or call hypothetical feedback a user study.
+Once repaired, revisit affected tasks and material dependencies. When several issues share a design cause, correct that cause at the necessary depth; do not preserve a weak concept merely to minimize changes. If a question cannot currently be resolved, keep a bounded result with an explicit limitation. Do not invent a passing check or call hypothetical feedback a user study.
 
 ## Keep scope and capabilities truthful
 

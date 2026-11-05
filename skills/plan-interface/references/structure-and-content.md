@@ -37,7 +37,8 @@ Apply these conditional decisions to the affected content and journeys. Preserve
 ## R22 — Preserve needed capabilities during redesign
 
 - Apply when changing an existing interface.
-- Link each material change to an observed problem or a new goal. Map needed content and capabilities to their new locations; retain working parts of the structure.
+- Link each material change to an observed problem or a requested goal. Consider clarity, readability, visual hierarchy, consistency, and visual direction alongside task flow and structure. Label an expert assessment as such; correcting an observable issue need not wait for usage analytics.
+- Map needed content, capabilities, permissions, and other constraints to the proposed design. Treat existing locations, grouping, navigation, layout, and presentation as revisable choices. Preserve useful existing decisions when they support the selected whole.
 - Account for frequent expert operations, justified density, and infrequent but necessary functions. Treat an unknown frequency or purpose as unknown, not as a reason to remove the capability.
 - Remove a capability only when removal is within the assignment or sufficient evidence establishes that it is unnecessary. Otherwise investigate it or preserve access while carrying the uncertainty.
 - Plan to observe whether all needed capabilities and information have an accessible location in the new structure or a justified exclusion within the assignment. Then check that core and significant expert tasks remain possible and that added steps or concealment have an explainable benefit.

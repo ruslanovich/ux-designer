@@ -1,0 +1,9 @@
+interface:
+  display_name: "Research Interface"
+  short_description: "Research design guidance for the current interface task"
+  default_prompt: "Use $research-interface to investigate professional guidance for this interface decision and explain what applies."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+
+policy:
+  allow_implicit_invocation: false

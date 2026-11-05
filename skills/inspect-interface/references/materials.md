@@ -1,27 +1,33 @@
 # Interpret the material and its limits
 
-Use this reference for R01, R02, R06, R07, R22, R24, and R35. Match inspection depth to the request.
+Use this reference for R01, R02, R06, R07, R22, R24, R35, and R38. Match inspection depth to the requested result and the related design problems.
 
 | Input | Extract | Preserve the boundary |
 | --- | --- | --- |
 | Raw idea or ordinary-language task | Intended outcome, proposed audience, objects, and constraints | Mark unestablished needs and behavior as hypotheses; begin without requiring more artifacts |
 | Copy, service lists, notes, example data | Meaning, information units, terminology, relationships, commitments, and required content | Attribute claims to the draft; distinguish examples from production facts and unresolved copy from agreed requirements |
-| Screenshot or static mockup | Visible grouping, labels, hierarchy, displayed actions, and captured state | Leave hidden states, permissions, live behavior, frequency, and user comprehension unknown |
+| Screenshot or static mockup | Visible grouping, labels, composition, typography, hierarchy, displayed actions, and captured state | Leave hidden states, permissions, live behavior, frequency, and user comprehension unknown |
 | Source code | Declared routes, components, data structures, state logic, and constraints | Separate implementation inferred from code from observed execution; retain runtime uncertainty |
 | Accessible running interface | States and outcomes actually exercised under recorded conditions | Limit conclusions to the paths, data, roles, devices, and conditions inspected |
-| Reference product or fragment | Structural role, apparent task, terminology, observed behavior, and platform | Compare transferability by task and context; keep proposed target behavior distinct |
+| Reference product or fragment | Structural role, apparent task, visual treatment, terminology, observed behavior, and platform | Compare transferability by task and context; record aesthetic preference as a preference and keep proposed target behavior distinct |
 
 Record the origin precisely enough to revisit it: a screen and state, excerpt, file location, or observed path. Use a location actually obtained from the material. Do not invent missing routes, interactions, or data.
 
 ## Capture reference compatibility
 
-Identify the exact fragment and what the user values. Explain the task it serves, its structural role, the observed behavior, and relevant access limits. Compare the target content, audience, relationships, and platform. Describe what may transfer, what needs adaptation, and what remains unknown. Reconcile terminology and interaction assumptions across references.
+Identify the exact fragment and what the user values. Explain the task it serves, its structural and visual role, the observed behavior, and relevant access limits. Compare the target content, audience, relationships, scale, and platform. Describe what may transfer, what needs adaptation, and what remains unknown. Reconcile terminology, visual direction, and interaction assumptions across references.
 
 Keep an attractive component as a candidate until its role fits the target. Pass component-specific platform questions into planning; similar geometry does not establish identical interaction semantics.
 
 ## Preserve capabilities during redesign
 
-Connect needed information and actions to current locations and scenarios. Include a source or uncertainty where purpose is not established. Carry relevant infrequent functions forward; frequency alone does not establish necessity. Let planning identify the new location or justified exclusion of each needed capability. Do not treat a cleaner screenshot as evidence that existing tasks still work.
+Connect needed information and actions to current locations and scenarios. Include a source or uncertainty where purpose is not established. Carry relevant infrequent functions, role boundaries, state transitions, and integration constraints forward; frequency alone does not establish necessity. Let planning identify the new location or justified exclusion of each needed capability. A cleaner screenshot requires separate checks of the affected tasks.
+
+## Gather useful visual evidence
+
+Inspect complete representative screens as well as relevant components. Record the captured content, role, state, viewport, and input conditions when known. Distinguish a design concern visible in the material from its hypothesized effect on the audience.
+
+When several screens use similar components, compare their treatments to find unintended inconsistency and deliberate differences. A compact inventory of distinct treatments is sufficient; do not collect every instance or inspect unrelated areas for a local request. Use the quality-coverage reference directly linked from SKILL.md to choose any deeper inspection.
 
 ## Use the foundations accurately
 
