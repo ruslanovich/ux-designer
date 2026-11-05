@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Work orders · Service Desk</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#queue-heading">Skip to work orders</a>
+  <header class="app-header">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">S</span><span>Service Desk</span><span class="product-area">Operations</span></div>
+    <div class="session-controls"><span class="demo-label">Demo · session only</span><label for="role">View as</label><select id="role"><option value="dispatcher">Dispatcher</option><option value="technician">Technician</option><option value="admin">Admin</option></select></div>
+  </header>
+  <main>
+    <div class="page-heading">
+      <div><p class="eyebrow">SERVICE OPERATIONS</p><h1>Work orders</h1><p class="intro">Find work, review the details, and assign a technician.</p></div>
+      <button id="export" class="button secondary" hidden>Export all CSV</button>
+    </div>
+    <p id="role-notice" class="notice" hidden>Technician view is read only. You can inspect work orders and their history.</p>
+    <div id="result" class="feedback" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+    <div class="workspace">
+      <section class="queue-panel panel" aria-labelledby="queue-heading">
+        <div class="queue-top"><div><h2 id="queue-heading" tabindex="-1">Work queue</h2><p id="result-count" class="muted" aria-live="polite" aria-atomic="true">4 work orders</p></div><span class="live-label"><span aria-hidden="true"></span>Local demo data</span></div>
+        <div class="filters">
+          <div class="search-field field"><label for="query">Search work orders</label><input id="query" type="search" placeholder="Customer, title or order number" autocomplete="off"></div>
+          <div class="field saved-field"><label for="views">Saved view</label><select id="views"><option value="">Custom view</option></select></div>
+          <button id="open-save-view" class="button secondary save-trigger" aria-expanded="false" aria-controls="save-view-panel">Save current view</button>
+        </div>
+        <form id="save-view-panel" class="inline-form" hidden novalidate>
+          <div class="field"><label for="view-name">View name</label><input id="view-name" placeholder="e.g. Acme waiting for access" aria-describedby="view-help view-error"><p id="view-help" class="field-help">Saves your search and status for this session. An existing name updates that view.</p><p id="view-error" class="field-error" hidden></p></div>
+          <div class="form-actions"><button id="save-view" class="button primary" type="submit">Save view</button><button id="cancel-save-view" class="button secondary" type="button">Cancel</button></div>
+        </form>
+        <div id="status-filters" class="status-filters" role="group" aria-label="Filter work orders by status">
+          <button id="status-all" data-status="all" class="status-filter" aria-pressed="true">All work <span id="count-all" class="filter-count">4</span></button>
+          <button id="status-new" data-status="new" class="status-filter" aria-pressed="false">New <span id="count-new" class="filter-count">1</span></button>
+          <button id="status-waiting" data-status="waiting" class="status-filter" aria-pressed="false">Waiting <span id="count-waiting" class="filter-count">1</span></button>
+          <button id="status-scheduled" data-status="scheduled" class="status-filter" aria-pressed="false">Scheduled <span id="count-scheduled" class="filter-count">1</span></button>
+          <button id="status-draft" data-status="draft" class="status-filter" aria-pressed="false">Drafts <span id="count-draft" class="filter-count">1</span></button>
+        </div>
+        <div class="view-summary"><p id="filter-summary" class="muted">Showing all statuses</p><button id="clear-filters" class="text-button" hidden>Clear filters</button></div>
+        <form id="assignment-panel" class="assignment-panel" aria-labelledby="selection-heading" hidden novalidate>
+          <div class="selection-heading"><div><h3 id="selection-heading">Selected work</h3><p id="selection-count" class="muted"></p></div><button id="clear-selection" class="text-button" type="button">Clear selection</button></div>
+          <ul id="selected-orders" class="selected-orders" aria-label="All selected work orders"></ul>
+          <p id="draft-warning" class="draft-warning" hidden>Drafts need completion before assignment. Other selected work can still be assigned.</p>
+          <div class="assign-controls"><div class="field"><label for="technician">Assign to technician</label><select id="technician" aria-describedby="technician-error"><option value="">Choose a technician</option><option value="Lee">Lee</option><option value="Sam">Sam</option></select><p id="technician-error" class="field-error" hidden></p></div><button id="assign" class="button primary" type="submit">Assign selected</button></div>
+          <p class="field-help">Assignment moves eligible work to Scheduled and records the change in history.</p>
+        </form>
+        <div class="queue-actions"><label id="select-all-label" class="check-label" for="select-all"><input id="select-all" type="checkbox">Select all shown</label><span id="shown-count" class="muted"></span></div>
+        <div class="column-labels" aria-hidden="true"><span></span><span>Work order</span><span>Status</span><span>Technician</span><span>Due</span></div>
+        <ul id="rows" class="order-list" aria-label="Work orders"></ul>
+        <div id="empty-state" class="empty-state" hidden><span class="empty-symbol" aria-hidden="true">⌕</span><h3>No work orders match</h3><p>Try another search or clear your filters to see all work.</p><button id="empty-clear" class="button secondary">Clear filters</button></div>
+        <p class="queue-footnote">All statuses remain available, including waiting work and drafts.</p>
+      </section>
+      <aside id="detail" class="detail-panel panel" aria-labelledby="detail-heading">
+        <div id="detail-empty" class="detail-empty"><span class="detail-icon" aria-hidden="true">↗</span><p class="eyebrow">WORK ORDER DETAILS</p><h2 id="detail-heading" tabindex="-1">Review a work order</h2><p>Select a work-order title to see its details, assignment and complete history.</p></div>
+        <div id="detail-content" hidden></div>
+      </aside>
+    </div>
+    <footer>Demonstration data. Changes and saved views reset when you reload.</footer>
+  </main>
+  <noscript><p class="notice">Enable JavaScript to search, inspect and assign demonstration work orders.</p></noscript>
+  <script src="model.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

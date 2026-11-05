@@ -8,5 +8,6 @@
   {"id":"raw-idea","fixture":"briefs/home-maintenance.md","entry":"design-interface","prompt":"I want a simple tool to organize home maintenance. I am not sure what should be on the screens. Help me work it out from these notes. Propose reasonable defaults for undecided details and save an initial plan in RESULT.md. Do not implement it yet."},
   {"id":"content-references","fixture":"briefs/landing.md","entry":"design-interface","prompt":"Use these notes and the parts I liked in these references to design the page. Explain what visitors should understand and do. Save the design in RESULT.md; implementation is a later step."},
   {"id":"native-plan","fixture":"briefs/native-flow.md","entry":"design-interface","prompt":"Design this flow for iOS and Android using the same product logic. Explain the platform-specific decisions. Save the plan in RESULT.md. No native implementation is requested."},
-  {"id":"concept-review","fixture":"briefs/concept-review.md","entry":"check-interface","prompt":"Review whether this implementation solves the original operator task. Save the review in RESULT.md. Do not implement changes."}
+  {"id":"concept-review","fixture":"briefs/concept-review.md","entry":"check-interface","prompt":"Review whether this implementation solves the original user task. Save the review in RESULT.md. Do not implement changes."},
+  {"id":"natural-redesign","fixture":"reading-list","entry":"design-interface","prompt":"Could you redesign this reading-list app? It feels rough and confusing. Keep the things it can already do."}
 ]

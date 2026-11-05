@@ -100,7 +100,7 @@ Archive entries use fixed timestamps and permissions. Building the same file con
 
 ## Make a release
 
-1. Update the version in all three plugin manifests, the Claude marketplace entry and metadata, the README, and the changelog. The Codex catalog resolves the version from the plugin manifest.
+1. Update the version in all three plugin manifests, the Claude marketplace entry and metadata, the README, and the changelog. The Codex catalog resolves the version from the plugin manifest. When publishing the candidate to `main`, remove the temporary candidate-installation notes from the README and installation guide.
 2. Run the validator, installer tests, and archive build. Review the diff for unintended project-specific data.
 3. Check installation and a representative workflow in the intended client versions. Run the relevant behavioral comparisons and report their conditions and limitations separately from package checks.
 4. Commit the release and publish a version tag or GitHub release when desired. Attach the generated ZIP and checksum if offering a direct plugin download.

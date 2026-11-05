@@ -2,6 +2,8 @@
 
 Install UX Designer once for your local user to use it across projects. The package contains seven cooperating skills; keep them together. Choose either a plugin installation or standalone skills for each client.
 
+> **Unreleased 0.2.0 candidate:** the remote marketplace and default-branch clone commands in this guide install the published `main` release, currently 0.1.0 with six skills. Use [the candidate instructions](evaluation-report.md#trying-the-candidate) to test the seven-skill branch.
+
 ## Claude Code plugin
 
 In a terminal:

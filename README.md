@@ -6,6 +6,8 @@ UX Designer is a set of seven connected skills for Claude Code and Codex. It hel
 
 Supports websites, browser apps, and native iOS and Android interfaces. The agent responds in your language. Repository documentation and packaged instructions are in English.
 
+> **0.2.0 development candidate:** this branch contains the unreleased seven-skill package. The ordinary remote installation commands below select the published release on `main`, currently 0.1.0 with six skills. To test this iteration, follow [the candidate installation instructions](docs/evaluation-report.md#trying-the-candidate).
+
 ## Install once, use across projects
 
 ### Claude Code

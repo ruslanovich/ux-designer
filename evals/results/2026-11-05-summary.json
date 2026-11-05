@@ -1,0 +1,562 @@
+{
+  "date": "2026-11-05",
+  "baseline_commit": "65114f479a66e3e9806457bb59018d85f10162f2",
+  "candidate_implementation_commit": "2082e87858cb0ab67d56978d3da428332f31c748",
+  "candidate_skill_tree_sha256": "e5604346390797a4bc41629e864c605832e7d971d376d5c56465650c2f350916",
+  "method": "Independent fresh hosted-agent conversations with the same supplied project and task; inherited model configuration; original user projects unavailable.",
+  "rendering": "Unavailable. Source, Node model/controller tests, and DOM doubles do not establish browser layout or accessibility behavior.",
+  "source_provenance": "Source use is recorded from delivered artifacts and agent reports; a complete host tool transcript is not exported.",
+  "package": {
+    "local_installer_tests": 13,
+    "ci_commit": "fed3284b77f780f81802c877f2e27ce5053d281f",
+    "ci_url": "https://github.com/ruslanovich/ux-designer/actions/runs/41994649154",
+    "ci_platforms": [
+      "ubuntu-latest",
+      "macos-latest",
+      "windows-latest"
+    ],
+    "ci_result": "success"
+  },
+  "client": {
+    "codex_version": "0.167.0-alpha.4",
+    "catalog_discovery": "observed",
+    "skill_invocation": "unverified",
+    "claude_code": "not executed",
+    "invocation_attempt": {
+      "method": "Ephemeral codex exec with workspace-write sandbox and a project-local candidate copy under .agents/skills; explicit $design-interface planning request. Existing client configuration was retained.",
+      "timeout_seconds": 300,
+      "exit_code": 124,
+      "json_event_bytes": 0,
+      "stderr_bytes": 0,
+      "final_answer_bytes": 0,
+      "application_unchanged": true,
+      "result": "Timed out without session events, a final answer, or an interface artifact; cause undetermined. Skill invocation and routing remain unverified."
+    }
+  },
+  "runs": [
+    {
+      "case": "rough-redesign",
+      "variant": "baseline",
+      "result": "implemented",
+      "review": "A coherent connected redesign was delivered; the original domain model is unchanged. Model and ten app-handler checks passed when independently rerun. Browser properties remain unverified.",
+      "reported_sources": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html"
+      ],
+      "input_sha256": "c347ee7a29c1e97d79c05070a50673bc5d800d51b9d853d96d2bde2a9c5d6b74",
+      "artifacts": {
+        "README.md": "c8d068ddd60eeab1489f4ae43b7bf82c8ca357437ba508a7064458bd31132b35",
+        "app.js": "0cf6c678fcbb4f7af25b410ea5c0f7021d610e9660ff5326a9b75359242c1f6f",
+        "app.test.js": "2387fa27ac94df81dc0fa284aab7c7d1a6bae19ea507417101d48e3710fa35c6",
+        "index.html": "a74bd4c78771f940fe137feaf4df9ebec2ada3e144e2c1aaa680bb1a70dce5f3",
+        "model.js": "a996c9a556687d112a6777803fbab8b08ca3fa1db28c8b59825dab6f9111df80",
+        "model.test.js": "98a803cc4deb53215dd16060e23740765679655d82509c1e9d59e9bab2e9eb49",
+        "styles.css": "6b5e8092ce2678eacc32f8ac237d40f381a42693cd5c562397fbdd57fbe2a029"
+      },
+      "artifact_directory": "evals/results/2026-11-05/rough-redesign/baseline",
+      "task_prompt_sha256": "c241f95e1d97978e9431713cce0ae79825d8eaafff57014fdf3b56785a3938f1"
+    },
+    {
+      "case": "rough-redesign",
+      "variant": "candidate",
+      "result": "implemented",
+      "review": "A coherent connected redesign and explicit scope rationale were delivered; the original model is unchanged. Model and app-handler checks passed when independently rerun. Browser properties remain unverified.",
+      "reported_sources": [
+        "https://www.nngroup.com/articles/cards-component/",
+        "https://www.w3.org/WAI/tutorials/forms/labels/",
+        "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html"
+      ],
+      "input_sha256": "c347ee7a29c1e97d79c05070a50673bc5d800d51b9d853d96d2bde2a9c5d6b74",
+      "artifacts": {
+        "README.md": "45857ca3fd1359b0744c64510385e154b1562e794105e4028144be39cbedf71e",
+        "app.js": "e80605a1fc068bc9eef3d3f04f1c2542a21379652b98c5def0d1f1141d536b7f",
+        "app.test.js": "330044dfb486f3cd314341f8523c2b49891aac60f3327a84ced0889baa935b9e",
+        "index.html": "05427249a049c7886ec6f8add1928bf568ed4b2d6b16e4a761adfa092f8e6823",
+        "model.js": "a996c9a556687d112a6777803fbab8b08ca3fa1db28c8b59825dab6f9111df80",
+        "model.test.js": "98a803cc4deb53215dd16060e23740765679655d82509c1e9d59e9bab2e9eb49",
+        "styles.css": "876c3570e826184d3c33ae356a8f7c44ff68b977790b7b38e53d64a6fe6b31bf"
+      },
+      "artifact_directory": "evals/results/2026-11-05/rough-redesign/candidate",
+      "task_prompt_sha256": "c241f95e1d97978e9431713cce0ae79825d8eaafff57014fdf3b56785a3938f1"
+    },
+    {
+      "case": "commercial-flow",
+      "variant": "baseline",
+      "result": "implemented",
+      "review": "Delivered a triage plan and implementation with selection context, partial-failure handling, views, history, role treatment, and export. Original model and thirteen controller tests passed when independently rerun. DOM wiring and rendered behavior remain unverified.",
+      "reported_sources": [
+        "https://carbondesignsystem.com/components/data-table/usage/",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/"
+      ],
+      "input_sha256": "983002c01171aff8906905ea34e880e8e4b1e7166f0139b55b8c06dbb49a45cf",
+      "artifacts": {
+        "CHECKS.md": "f07c3973c6ea1c5471b8a639fb1ad122470e488995486491995aeb8baabe7828",
+        "DESIGN.md": "8009aab5ad046e28983c0ee8c1b6a9a8e891d94b03d7b255f79df17e2562348d",
+        "README.md": "b0f1d68fffa7b7c40c579e0c3c7c8489d173203a08db68f036bcf4a9846db116",
+        "app.js": "0ce26c380c10c6294c8b71cb9ca1a69ef9927cd2e26b10d05e724753f8b03619",
+        "index.html": "d4f8ca56c36e6a2d81b4a534495c95b71608ad3578476b9a67be7bfb1d606e25",
+        "model.js": "f6ef5ffc03486b8204e767873686e1bb2765b86694f9ec97eccb8e42db27ccfb",
+        "model.test.js": "5a5518987d8e0a5c342e0216093cee4112c0b6114a5eed3fe18c998a613a9986",
+        "styles.css": "77689ab8b746306de02bfeebfb8a254cb630546ae4e7fab95653eb431bee4ce4",
+        "triage.js": "bfdc5fe7f156fdb11dcfcde126d9c7d0adbf9a6374679511e67e3bfd181fe952",
+        "triage.test.js": "259a9b9cfa782e4f3bd56efcfa6261a68b4158b843894be6ade3fb18eff8fe21"
+      },
+      "artifact_directory": "evals/results/2026-11-05/commercial-flow/baseline",
+      "interpretation_limit": "The brief mentions assigned technician work, but the model has no authenticated technician identity or row-visibility policy. Baseline uses a labeled demo-assignee filter; candidate retains model-visible records with read-only controls. Neither verifies production access control.",
+      "task_prompt_sha256": "0f2133f233adecafbf305125d7bb5516a687a2eea908a513b98817a445b36973"
+    },
+    {
+      "case": "commercial-flow",
+      "variant": "candidate",
+      "result": "implemented",
+      "review": "Delivered a coherent triage plan, authored SVG storyboard, and working handlers. Original model and model tests are unchanged. Model tests and five actual-handler scenario groups passed when independently rerun. Browser layout, focus, and accessibility remain unverified.",
+      "reported_sources": [
+        "https://www.carbondesignsystem.com/building-blocks/core/components/data-table/guidelines",
+        "https://www.w3.org/WAI/tutorials/forms/notifications/",
+        "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html"
+      ],
+      "input_sha256": "983002c01171aff8906905ea34e880e8e4b1e7166f0139b55b8c06dbb49a45cf",
+      "preserved_files_verified": [
+        "model.js",
+        "model.test.js"
+      ],
+      "artifacts": {
+        "DESIGN.md": "9f855cc024e8f1838320028dfdef2d69e951b180669c13c57abbdd33e6245170",
+        "README.md": "91c6f66bf3e9927324c9a7ddf774bc6e089535cace4625f5e1a82eb04305caa4",
+        "app.js": "be7a353ffb0565c4545fd00cae4aaf0f305d2ab0dbfc7c96d741f50530ef3fc2",
+        "app.test.js": "bd08d3d87505c0f8955d015b2484f70623fdce80f00c26e2c8fd8d103a7d536d",
+        "index.html": "9f091908d724866150bee31ea493ca907ae5451c2b6563aa377e37d790570b89",
+        "model.js": "f6ef5ffc03486b8204e767873686e1bb2765b86694f9ec97eccb8e42db27ccfb",
+        "model.test.js": "5a5518987d8e0a5c342e0216093cee4112c0b6114a5eed3fe18c998a613a9986",
+        "styles.css": "a2b531723e2ae59a2f52218a6436ab3e2790f761c59f76f2c45f323419e1ce84",
+        "target-experience.svg": "d0c07387ee9fe2888e8a076ad9ddfa8daac2f54a387a903ee67808bc578cb021"
+      },
+      "artifact_directory": "evals/results/2026-11-05/commercial-flow/candidate",
+      "interpretation_limit": "The brief mentions assigned technician work, but the model has no authenticated technician identity or row-visibility policy. Baseline uses a labeled demo-assignee filter; candidate retains model-visible records with read-only controls. Neither verifies production access control.",
+      "task_prompt_sha256": "0f2133f233adecafbf305125d7bb5516a687a2eea908a513b98817a445b36973"
+    },
+    {
+      "case": "local-fix",
+      "variant": "baseline",
+      "result": "focused correction",
+      "review": "Only the inline save handler changed. Independent source comparison and a DOM-stub execution confirmed failure/retry labels, retained input, and prevented navigation. Browser behavior remains unverified.",
+      "input_sha256": "8906a95d0cbd5297e710a9a559b45a35186f3e52d89660d1acbb34ad9fb314ed",
+      "artifacts": {
+        "index.html": "b23e3637aed241d1646886c4ef3f40deca9e397cb34ca0780bd4aec8d8892d77"
+      },
+      "artifact_directory": "evals/results/2026-11-05/local-fix/baseline",
+      "task_prompt_sha256": "f00247a48483cc3d8bd2b8fea9779067dafdd8ceffa5ae5b6bcf4d7ddd68ba03"
+    },
+    {
+      "case": "local-fix",
+      "variant": "candidate",
+      "result": "focused correction",
+      "review": "Only the inline save handler changed. Independent source comparison and a DOM-stub execution confirmed failure/retry labels, retained input, and prevented navigation. Browser behavior remains unverified.",
+      "input_sha256": "8906a95d0cbd5297e710a9a559b45a35186f3e52d89660d1acbb34ad9fb314ed",
+      "artifacts": {
+        "index.html": "742b696955cba494e337f6ebb603c94099a0dc973f40cdbbc016b9bb13c6c5a3"
+      },
+      "artifact_directory": "evals/results/2026-11-05/local-fix/candidate",
+      "task_prompt_sha256": "f00247a48483cc3d8bd2b8fea9779067dafdd8ceffa5ae5b6bcf4d7ddd68ba03"
+    },
+    {
+      "case": "audit-only",
+      "variant": "baseline",
+      "result": "audit delivered",
+      "review": "Delivered prioritized structural, visual, feedback, and persistence findings. All five original project files are unchanged. The artifact separates source/DOM-simulation findings from unverified browser properties.",
+      "original_files_unchanged": true,
+      "artifacts": {
+        "README.md": "83885be8405a8504ad45bc41f9a3f7f69ccebb3ed845419c19ebbf03a82b4565",
+        "RESULT.md": "dd8ed4753185fba1ec45b3d0aa7ce0b36342764e7fece703e054fff946416ac3",
+        "app.js": "235b6588e5bc5436b50ebbd8e22f279edcbcbbe58e34ee8b4fb0a13217042149",
+        "index.html": "68a2db9f2a52d851eefbdc6180346324c8c6a82485ed35334ae66c479e1ce7b2",
+        "model.js": "a996c9a556687d112a6777803fbab8b08ca3fa1db28c8b59825dab6f9111df80",
+        "model.test.js": "98a803cc4deb53215dd16060e23740765679655d82509c1e9d59e9bab2e9eb49"
+      },
+      "input_sha256": "c347ee7a29c1e97d79c05070a50673bc5d800d51b9d853d96d2bde2a9c5d6b74",
+      "artifact_directory": "evals/results/2026-11-05/audit-only/baseline",
+      "task_prompt_sha256": "1c162897b5b389724aab6115167d995f4537b4431f53947710f2779dd98d3121"
+    },
+    {
+      "case": "audit-only",
+      "variant": "candidate",
+      "result": "audit delivered",
+      "review": "Prioritized connected-screen redesign, saving/recovery, visual hierarchy, responsive access, search scope, and action feedback. Original project files are unchanged. Source versus simulated versus unverified findings are explicitly separated.",
+      "reported_sources": [
+        "https://www.w3.org/TR/WCAG22/",
+        "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html",
+        "https://developer.mozilla.org/en-US/docs/Web/API/Storage/setItem",
+        "https://www.nngroup.com/articles/ten-usability-heuristics/",
+        "https://www.nngroup.com/articles/cards-component/"
+      ],
+      "input_sha256": "c347ee7a29c1e97d79c05070a50673bc5d800d51b9d853d96d2bde2a9c5d6b74",
+      "preserved_files_verified": [
+        "index.html",
+        "model.js",
+        "app.js",
+        "model.test.js",
+        "README.md"
+      ],
+      "artifacts": {
+        "README.md": "83885be8405a8504ad45bc41f9a3f7f69ccebb3ed845419c19ebbf03a82b4565",
+        "RESULT.md": "30ade8f70c7cce3bc1ec6baabce4abe9031cfcd607ab98e4b4714cf29b2d9638",
+        "app.js": "235b6588e5bc5436b50ebbd8e22f279edcbcbbe58e34ee8b4fb0a13217042149",
+        "index.html": "68a2db9f2a52d851eefbdc6180346324c8c6a82485ed35334ae66c479e1ce7b2",
+        "model.js": "a996c9a556687d112a6777803fbab8b08ca3fa1db28c8b59825dab6f9111df80",
+        "model.test.js": "98a803cc4deb53215dd16060e23740765679655d82509c1e9d59e9bab2e9eb49"
+      },
+      "artifact_directory": "evals/results/2026-11-05/audit-only/candidate",
+      "task_prompt_sha256": "1c162897b5b389724aab6115167d995f4537b4431f53947710f2779dd98d3121"
+    },
+    {
+      "case": "visual-plan",
+      "variant": "baseline",
+      "result": "concrete visual plan",
+      "review": "Specified typography, calculated palette, hierarchy, row geometry, consistent actions, narrow-screen composition, and verification conditions while preserving all content and useful grouping. Parent verified application bytes unchanged. No rendered visual review occurred.",
+      "input_sha256": "9f531fee2be1c81077cbb924cbf20a0a8ecb50eae0650f46c1d48729f2259b4a",
+      "original_files_unchanged": true,
+      "reported_sources": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+        "https://www.w3.org/TR/WCAG22/"
+      ],
+      "artifacts": {
+        "RESULT.md": "6949a22f93ba95912742ebbe91ea508ca700ec84e593fab56c15ef16eb7377d0",
+        "index.html": "81a9e1ca08d346fe452ec7f0213350b96464e840aac5c80e69b528d8cc62d1bd"
+      },
+      "artifact_directory": "evals/results/2026-11-05/visual-plan/baseline",
+      "task_prompt_sha256": "ca35ef6a21d4689a7fc92cddbbd3f63fcbb67611c587e5782844be79632a5c97"
+    },
+    {
+      "case": "visual-plan",
+      "variant": "candidate",
+      "result": "concrete visual plan and drawing",
+      "review": "Specified typography, palette, hierarchy, aligned actions, responsive composition and connected states, with explicit integration dependencies. Parent inspected the static drawing and verified application bytes unchanged. The drawing is not browser-rendered evidence.",
+      "input_sha256": "9f531fee2be1c81077cbb924cbf20a0a8ecb50eae0650f46c1d48729f2259b4a",
+      "original_files_unchanged": true,
+      "reported_sources": [
+        "https://www.nngroup.com/articles/principles-visual-design/",
+        "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html"
+      ],
+      "artifact_directory": "evals/results/2026-11-05/visual-plan/candidate",
+      "artifacts": {
+        "RESULT.md": "10c7a41551237ce98683e288c98ac24e966a3adef9270d99f7a948a9173830e0",
+        "index.html": "81a9e1ca08d346fe452ec7f0213350b96464e840aac5c80e69b528d8cc62d1bd",
+        "redesign-preview.png": "d59f7371327d93b5bd86d6edc05a2424b08459355d2c14cdfa1f3cb8ed1581ad"
+      },
+      "task_prompt_sha256": "ca35ef6a21d4689a7fc92cddbbd3f63fcbb67611c587e5782844be79632a5c97"
+    },
+    {
+      "case": "proactive-research",
+      "variant": "baseline",
+      "result": "research-informed plan",
+      "review": "Designed explicit page/all-matching selection, fixed membership, background progress, partial-outcome accounting, and recovery excluding applied or unknown work. The delivered plan connects Carbon and technical primary sources to decisions and separates service guarantees from design. Source opens are reported by the execution agent; brief preservation was independently checked. Synthetic specification assertions are not runtime tests.",
+      "input_sha256": "0f538411fcf94ee7d83967e2468a5d85f9ae71036c90fcd62f88bbf5ac50fad4",
+      "original_files_unchanged": true,
+      "reported_sources": [
+        "https://www.carbondesignsystem.com/building-blocks/core/components/data-table/guidelines",
+        "https://www.rfc-editor.org/rfc/rfc9110.html#name-202-accepted",
+        "https://google.aip.dev/155",
+        "https://google.aip.dev/234",
+        "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html"
+      ],
+      "artifact_directory": "evals/results/2026-11-05/proactive-research/baseline",
+      "artifacts": {
+        "BRIEF.md": "3c3b11f42859fb76a8eccac90573f52e4a0dfb9c88b839eed28345a5c91eb180",
+        "RESULT.md": "1d9b829b4105e08f7eb555a0bbca142b8abadcdbda7be43a8a7bf1e7a8c60815"
+      },
+      "source_read_provenance": "Post-task report distinguished substantive open/find reads from snippets and local references. The coordinating agent reopened the available retrieval references and confirmed that they resolved. No complete host transcript was exported.",
+      "research_mode_observed": "Direct primary-source opens and targeted page finds; the execution agent reported no search-engine query.",
+      "resolved_retrieval_references": [
+        "turn165view0",
+        "turn169view2",
+        "turn167view1",
+        "turn169view1",
+        "turn167view0"
+      ],
+      "source_read_limits": "AIP-234 read was reported without a retained retrieval identifier. MDN History API and WAI APG were local-reference citations, not independent external reads. WCAG 2.2 was opened but its body was not available in the visible tool output.",
+      "task_prompt_sha256": "eb4fa98344f8aff51c99516ff5b457ef612c7a0eee02d62cd48cdce85ffc2a65"
+    },
+    {
+      "case": "proactive-research",
+      "variant": "candidate",
+      "result": "research-informed plan",
+      "review": "Chose explicit page/all-matching scope, captured membership, one-attribute operations, durable progress, source-aware interaction adaptations, and failure-specific recovery. Professional guidance is connected to decisions and service dependencies remain unverified. Parent checked brief preservation and the report; arithmetic checks are not runtime tests.",
+      "input_sha256": "0f538411fcf94ee7d83967e2468a5d85f9ae71036c90fcd62f88bbf5ac50fad4",
+      "original_files_unchanged": true,
+      "reported_sources": [
+        "https://www.patternfly.org/patterns/bulk-selection/",
+        "https://www.carbondesignsystem.com/building-blocks/core/components/data-table/guidelines",
+        "https://learn.microsoft.com/en-us/azure/architecture/patterns/async-request-reply",
+        "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html"
+      ],
+      "artifact_directory": "evals/results/2026-11-05/proactive-research/candidate",
+      "artifacts": {
+        "BRIEF.md": "3c3b11f42859fb76a8eccac90573f52e4a0dfb9c88b839eed28345a5c91eb180",
+        "RESULT.md": "7091f234e98650690c6c28ef692b91b0a8b76028349f6f287c4b0555efaa4966"
+      },
+      "source_read_provenance": "Post-task report distinguished substantive open/find reads from snippets and local references. The coordinating agent reopened the available retrieval references and confirmed that they resolved. No complete host transcript was exported.",
+      "research_mode_observed": "Search for PatternFly and Carbon, followed by substantive opens/finds. Other search results were not counted as read evidence.",
+      "resolved_retrieval_references": [
+        "turn168search0",
+        "turn170view0",
+        "turn172view0",
+        "turn171view0",
+        "turn171view2"
+      ],
+      "source_read_limits": "Microsoft asynchronous pattern reads were reported without a retained retrieval identifier. Publications only linked in local guidance were explicitly excluded from the external-read count.",
+      "task_prompt_sha256": "eb4fa98344f8aff51c99516ff5b457ef612c7a0eee02d62cd48cdce85ffc2a65",
+      "archived_artifacts": {
+        "RESULT.md": "c1b75465a7d00824b78d07e406db2448888b58bf333299e0d4aec4773e1a4d4c"
+      },
+      "archive_transforms": {
+        "RESULT.md": "Two two-space Markdown hard breaks rewritten as equivalent backslash hard breaks; substantive text unchanged."
+      }
+    },
+    {
+      "case": "raw-idea",
+      "variant": "baseline",
+      "result": "initial plan with explicit defaults",
+      "review": "Progressed from a short idea to Due/Jobs/History screens, completion/history behavior, phone adaptation, and explicit account/storage/reminder defaults. No questionnaire or implementation was imposed. The plan identifies recurrence and service dependencies as revisable choices. Parent verified supplied brief unchanged.",
+      "input_sha256": "07d90d41a58cc411300208b4ea6802483623e622abefaee28beac0d11229e4c4",
+      "original_files_unchanged": true,
+      "reported_sources": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+        "https://developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API"
+      ],
+      "artifact_directory": "evals/results/2026-11-05/raw-idea/baseline",
+      "artifacts": {
+        "BRIEF.md": "3ae23f1ef80d21a58045f50b3a997b3a11258460008c0c6092194a89a4afc83d",
+        "RESULT.md": "70b3c1c1f648dd6d9c3d539d3c9ff0cefaa0ae008911c25fa0e4547b383b4c02"
+      },
+      "task_prompt_sha256": "382cea3e44d3f4a419a831c337174be70a6eb0b48ecb9c505bdb412ebe9cb325"
+    },
+    {
+      "case": "raw-idea",
+      "variant": "candidate",
+      "result": "initial plan with explicit defaults",
+      "review": "Progressed to Jobs/History, representative desktop/phone composition, completion/history and recovery flows, and revisable product defaults without demanding a professional brief or implementing. Distinguished design guidance from limited maintenance-domain evidence; considered calendar-fixed and after-completion recurrence. Parent verified the supplied brief unchanged.",
+      "input_sha256": "07d90d41a58cc411300208b4ea6802483623e622abefaee28beac0d11229e4c4",
+      "original_files_unchanged": true,
+      "reported_sources": [
+        "https://www.nngroup.com/articles/recognition-and-recall/",
+        "https://www.w3.org/WAI/tutorials/forms/notifications/",
+        "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+        "https://www.energystar.gov/saveathome/heating-cooling/maintenance-checklist"
+      ],
+      "artifact_directory": "evals/results/2026-11-05/raw-idea/candidate",
+      "artifacts": {
+        "BRIEF.md": "3ae23f1ef80d21a58045f50b3a997b3a11258460008c0c6092194a89a4afc83d",
+        "RESULT.md": "c822be6dbea9872d9da2d6aaa312090209142f76f39f3d0011ea30e325acf51d"
+      },
+      "task_prompt_sha256": "382cea3e44d3f4a419a831c337174be70a6eb0b48ecb9c505bdb412ebe9cb325"
+    },
+    {
+      "case": "content-references",
+      "variant": "baseline",
+      "result": "landing-page design",
+      "review": "Organized product meaning, a consistent three-step example, comparable request information, and the access request. Adapted described reference functions without claiming site visits, excluded the unsupported speed claim, and left pricing/product operations explicit. Parent verified brief unchanged; no implementation was added.",
+      "input_sha256": "5851c36827cd8b4e24b2f5d80ef3911617856cec32f08f9f26e36c178ce4dd9c",
+      "original_files_unchanged": true,
+      "reported_sources": [
+        "https://www.w3.org/TR/WCAG22/",
+        "https://www.w3.org/WAI/tutorials/forms/notifications/"
+      ],
+      "artifact_directory": "evals/results/2026-11-05/content-references/baseline",
+      "artifacts": {
+        "BRIEF.md": "5b674dbcb81801618b357346dd340118ff9420464f70c3a89592dbd4e9969c80",
+        "RESULT.md": "852969f67667599332e8b2e4db4d619f62c6e451a4373468d8831ac9b02bcc1b"
+      },
+      "task_prompt_sha256": "19b7b511c3769b9ed9daa371780eb3627f3675c12586093bff9d11f16c6c3f82"
+    },
+    {
+      "case": "content-references",
+      "variant": "candidate",
+      "result": "landing-page design and static studies",
+      "review": "Designed a coherent page, concrete copy, access states, and desktop/mobile static studies. Adapted comparison and location references with professional-source reasoning, excluded the unsupported speed claim, and kept pricing undecided. Parent read the plan, inspected both drawings, and verified the brief unchanged. The drawings are not browser screenshots or runtime verification.",
+      "input_sha256": "5851c36827cd8b4e24b2f5d80ef3911617856cec32f08f9f26e36c178ce4dd9c",
+      "original_files_unchanged": true,
+      "reported_sources": [
+        "https://www.nngroup.com/articles/comparison-tables/",
+        "https://www.nngroup.com/articles/breadcrumbs/",
+        "https://www.w3.org/WAI/tutorials/forms/notifications/",
+        "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"
+      ],
+      "artifact_directory": "evals/results/2026-11-05/content-references/candidate",
+      "artifacts": {
+        "BRIEF.md": "5b674dbcb81801618b357346dd340118ff9420464f70c3a89592dbd4e9969c80",
+        "RESULT.md": "47f48d2efc5f23c29e3578034a85e9e10f19549249af62e5c3cd9844084f7f6c",
+        "design-desktop.png": "f01367f7b9954926cba7c16513babb804b59fa574aa5b13c794bf5eaba7c29ae",
+        "design-mobile.png": "368be369c5bbcf0d8ada6bd20d927287340bf6b84b29b66e50e7256a67b13f17"
+      },
+      "task_prompt_sha256": "19b7b511c3769b9ed9daa371780eb3627f3675c12586093bff9d11f16c6c3f82"
+    },
+    {
+      "case": "native-plan",
+      "variant": "baseline",
+      "result": "native flow plan",
+      "review": "Specified shared content, durable drafts, explicit submission and receipt-only locking, unknown-outcome recovery, conflicts, and meaningful iOS/Android navigation, keyboard, media and access decisions. Parent reviewed the plan and checked brief preservation. Native behavior remains unverified.",
+      "input_sha256": "f07781bacb74a4ae9e80079c1823dd3a3d0c4854cafbc4f511aaa6d499f2bde4",
+      "original_files_unchanged": true,
+      "reported_sources": [
+        "https://developer.apple.com/design/human-interface-guidelines/sheets",
+        "https://developer.apple.com/design/human-interface-guidelines/text-views",
+        "https://developer.apple.com/documentation/uikit/uikeyboardlayoutguide",
+        "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+        "https://developer.android.com/guide/navigation/principles",
+        "https://developer.android.com/develop/ui/views/notifications/navigation",
+        "https://developer.android.com/develop/ui/compose/system/insets-ui",
+        "https://developer.android.com/training/data-storage/shared/photopicker",
+        "https://developer.android.com/guide/topics/ui/accessibility/principles",
+        "https://developer.android.com/guide/topics/ui/accessibility/apps"
+      ],
+      "artifact_directory": "evals/results/2026-11-05/native-plan/baseline",
+      "artifacts": {
+        "BRIEF.md": "aaee55cc76b18ae410c786ee154ec79c261ec3d676dc39e01d462d4564d36f1e",
+        "RESULT.md": "b0882f1a053b68c3a5d49c86ef3539edee92bda4137bd983c6690e101a3ca8c6"
+      },
+      "task_prompt_sha256": "1fa254e84ecdc8a906a5b747664dba8b9f8d2a35bb98e3c0768e23f338572c9a"
+    },
+    {
+      "case": "native-plan",
+      "variant": "candidate",
+      "result": "native flow plan",
+      "review": "Specified common task/state contracts, durable drafts and attempt identity, recoverable conflicts, concrete screen hierarchy, and platform-specific Back/Up, notification entry, keyboard, sheets and media behavior. Parent reviewed the plan and checked brief preservation. No native runtime, simulator or device evidence exists.",
+      "input_sha256": "f07781bacb74a4ae9e80079c1823dd3a3d0c4854cafbc4f511aaa6d499f2bde4",
+      "original_files_unchanged": true,
+      "reported_sources": [
+        "https://developer.android.com/guide/navigation/principles",
+        "https://developer.android.com/develop/ui/views/notifications/navigation",
+        "https://developer.apple.com/documentation/uikit/adjusting-your-layout-with-keyboard-layout-guide",
+        "https://developer.android.com/develop/ui/compose/system/keyboard-animations",
+        "https://developer.apple.com/design/human-interface-guidelines/sheets",
+        "https://developer.android.com/training/data-storage/shared/photo-picker",
+        "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+        "https://developer.android.com/guide/topics/ui/accessibility/apps",
+        "https://developer.android.com/topic/libraries/architecture/saving-states"
+      ],
+      "artifact_directory": "evals/results/2026-11-05/native-plan/candidate",
+      "artifacts": {
+        "BRIEF.md": "aaee55cc76b18ae410c786ee154ec79c261ec3d676dc39e01d462d4564d36f1e",
+        "RESULT.md": "23828c6e7d13bac6d0fc5c982f6bae4727cb3a2104d2de0cd6309ae96a09e6ac"
+      },
+      "task_prompt_sha256": "1fa254e84ecdc8a906a5b747664dba8b9f8d2a35bb98e3c0768e23f338572c9a"
+    },
+    {
+      "case": "concept-review",
+      "variant": "baseline",
+      "result": "concept gap identified",
+      "review": "Identified the missing three-plan/four-fact comparison despite reported fidelity to the chosen plan. Routed the structural correction to planning, kept the review-only endpoint, and distinguished document evidence from unobserved runtime behavior. Parent verified the brief unchanged.",
+      "input_sha256": "547546004757a1d59fb8b452d72dcaff1702fcfde1effca8faef3cdaa157fee0",
+      "original_files_unchanged": true,
+      "reported_sources": [],
+      "artifact_directory": "evals/results/2026-11-05/concept-review/baseline",
+      "artifacts": {
+        "BRIEF.md": "f00399dc57da2b137c636d9c5a6121c5d0192b51543980b6fa39494f6c07003c",
+        "RESULT.md": "80c0aade9aab20af077659497c8d410ea867447d58c44ed43646b55315d602f5"
+      },
+      "archived_artifacts": {
+        "RESULT.md": "2eaaa380ab1592669bb633de6300045f7961968052c7a021e73ed4e3369adbd5"
+      },
+      "archive_transforms": {
+        "RESULT.md": "Relative local skill links replaced with immutable GitHub links to the exact package commit; substantive output unchanged."
+      },
+      "task_prompt_sha256": "5f662436237820ed6ca49c90c3f720ece83083db84fc298acb6b4b32724d0c20"
+    },
+    {
+      "case": "concept-review",
+      "variant": "candidate",
+      "result": "concept gap identified",
+      "review": "Identified the missing three-plan/four-fact comparison and lost return context despite reported plan fidelity. Routed redesign to planning and distinguished concept judgment, documentary disclosure sequence, and unverified runtime correspondence. Parent verified the brief unchanged. The endpoint remained review-only.",
+      "input_sha256": "547546004757a1d59fb8b452d72dcaff1702fcfde1effca8faef3cdaa157fee0",
+      "original_files_unchanged": true,
+      "reported_sources": [],
+      "artifact_directory": "evals/results/2026-11-05/concept-review/candidate",
+      "artifacts": {
+        "BRIEF.md": "f00399dc57da2b137c636d9c5a6121c5d0192b51543980b6fa39494f6c07003c",
+        "RESULT.md": "1a9470ee5a85e63c471cd6e27893100140aacce151a43617adecfda02cce1484"
+      },
+      "archived_artifacts": {
+        "RESULT.md": "68d486629b8b84c63c593a5546434af611b3204847eb0a8c5e8a289d5070cdee"
+      },
+      "archive_transforms": {
+        "RESULT.md": "Relative local skill links replaced with immutable GitHub links to the exact package commit; substantive output unchanged."
+      },
+      "task_prompt_sha256": "5f662436237820ed6ca49c90c3f720ece83083db84fc298acb6b4b32724d0c20"
+    },
+    {
+      "case": "natural-redesign",
+      "variant": "baseline",
+      "result": "implemented without explicit implementation wording",
+      "review": "Interpreted the ordinary redesign request as an implementation task, delivered a coherent reading-list redesign, and preserved the original model and test. Parent independently reran the model, ten controller scenario groups, and app syntax check successfully. The reported hesitation was not reproduced under these conditions. Browser behavior is unverified.",
+      "input_sha256": "c347ee7a29c1e97d79c05070a50673bc5d800d51b9d853d96d2bde2a9c5d6b74",
+      "preserved_files_verified": [
+        "model.js",
+        "model.test.js"
+      ],
+      "reported_sources": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html",
+        "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage"
+      ],
+      "artifact_directory": "evals/results/2026-11-05/natural-redesign/baseline",
+      "artifacts": {
+        "DESIGN.md": "b41d97e7bc8b8ccf5da82b63b46c4b1812e8a4ae25fa732db9f8af11b5d02127",
+        "README.md": "103d4f09707d45eabf69ef4aabc7714da1b7286886c794b39d890ebe0198d829",
+        "app.js": "859f3e943f6a0bf7b5afb1524d10d25f20d62ee6e13b4945457f72bf6b044c89",
+        "index.html": "104c0549f71dd7d44e8e691627f531ece6a5bead04139278489bf94394f55064",
+        "model.js": "a996c9a556687d112a6777803fbab8b08ca3fa1db28c8b59825dab6f9111df80",
+        "model.test.js": "98a803cc4deb53215dd16060e23740765679655d82509c1e9d59e9bab2e9eb49",
+        "reading-state.js": "c1873351a8c05fd5f592e0d1af11da25684dd3fdbd2aea807faed5413f2fc367",
+        "reading-state.test.js": "e2e9ffd464f7a6546f59695a2cc830ef3a7808bfc08aa1d5ecef522275f17f26",
+        "styles.css": "a71689b34c0cfe9af4b1c8390a1bbadb310a7c1d48866084b4a8a8304cef7935"
+      },
+      "task_prompt_sha256": "5b4a2bc86651d95f877c0360f80221e7231366ebfa888ceb923c5e17b5e537df"
+    },
+    {
+      "case": "natural-redesign",
+      "variant": "candidate",
+      "result": "implemented without explicit implementation wording",
+      "review": "Completed a coherent reading-list redesign with scope, visual choices, source effects, and concept review. Preserved the original model and test. Parent independently reran the model, eleven actual-handler scenario groups, and app syntax check successfully. Both variants implemented the natural-language request. Rendered behavior is unverified.",
+      "input_sha256": "c347ee7a29c1e97d79c05070a50673bc5d800d51b9d853d96d2bde2a9c5d6b74",
+      "preserved_files_verified": [
+        "model.js",
+        "model.test.js"
+      ],
+      "reported_sources": [
+        "https://www.nngroup.com/articles/cards-component/",
+        "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+        "https://www.w3.org/WAI/tutorials/forms/notifications/"
+      ],
+      "artifact_directory": "evals/results/2026-11-05/natural-redesign/candidate",
+      "artifacts": {
+        "DESIGN.md": "c505580254fda266f3b7b0c262872f54c874357e812f19c1054b13352bd16d4e",
+        "README.md": "34cf2bd2e5506751598f3683a1efb9b0668f3b1841c39ebc5e086828d0546eca",
+        "app.js": "907a8f26e627de0f8e8ea1a2dc31ac77473e3110ddda06b779823f9b3031786a",
+        "app.test.js": "7331f6e016bce30ed5add9ecbeae80f5505896884977991d73477cb8f59947f5",
+        "index.html": "87fec6542633bb5f33ccfeb002d29f7c9598e3a1e8f6f842d011a41f9caee3a5",
+        "model.js": "a996c9a556687d112a6777803fbab8b08ca3fa1db28c8b59825dab6f9111df80",
+        "model.test.js": "98a803cc4deb53215dd16060e23740765679655d82509c1e9d59e9bab2e9eb49",
+        "styles.css": "98365754c689d3bfa62b27e5eb207d388c7b3d53b53d9c3c34b29d946e14f8f3"
+      },
+      "task_prompt_sha256": "5b4a2bc86651d95f877c0360f80221e7231366ebfa888ceb923c5e17b5e537df"
+    }
+  ],
+  "runtime": {
+    "system": "Linux",
+    "architecture": "x86_64",
+    "python": "3.12.14",
+    "node": "v24.22.1"
+  },
+  "hash_method": "SHA-256 over concatenated sorted POSIX relative filenames, a NUL separator, and file bytes, excluding __pycache__ directories and .pyc files; artifact entries hash each delivered file independently.",
+  "case_count": 11,
+  "completed_runs": 22,
+  "task_language": "English",
+  "effectiveness_conclusion": "No general superiority claim. Both variants implemented the synthetic redesigns, including the natural-language holdout, and used professional evidence in the research case. The original private cases were not reproduced.",
+  "final_review": "A separate read-only review checked runtime consistency, evidence claims, hashes, links, versions and archive contents. It identified an ambiguous candidate installation route, corrected by prominent unreleased-candidate notes in the README and installation guide."
+}

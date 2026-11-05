@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1050" viewBox="0 0 1440 1050" role="img" aria-labelledby="title desc">
+<title id="title">Work-order triage target experience</title><desc id="desc">Design storyboard showing queue, retained selections, assignment, contextual details and partial success. This is an authored design preview, not a browser screenshot.</desc>
+<style>text{font-family:Arial,sans-serif} .small{font-size:12px;fill:#546475}.label{font-size:13px;fill:#182635}.heading{font-size:20px;font-weight:700;fill:#182635}.body{font-size:14px;fill:#182635}</style>
+<rect x="0" y="0" width="1440" height="1050" fill="#edf2f6" stroke="none" rx="0"/>
+<text x="36" y="36" class="small">TARGET EXPERIENCE</text>
+<text x="36" y="67" class="heading">Work-order triage: find → review → assign</text>
+<text x="36" y="92" class="small">Authored design preview · Desktop layout and partial-result continuation · Demo records</text>
+<rect x="28" y="116" width="1384" height="763" fill="#f3f6f8" stroke="#cbd8e3" rx="12"/>
+<rect x="28" y="116" width="1384" height="59" fill="#172c40" stroke="none" rx="10"/>
+<text x="51" y="152" class="heading" style="fill:#ffffff">S   Service Desk</text>
+<text x="230" y="151" class="body" style="fill:#c4d2df">Operations</text>
+<text x="1108" y="151" class="small" style="fill:#c4d2df">Demo · session only</text>
+<rect x="1242" y="131" width="145" height="30" fill="#ffffff" stroke="none" rx="5"/>
+<text x="1254" y="151" class="label">Dispatcher ▾</text>
+<text x="54" y="207" class="small">SERVICE OPERATIONS</text>
+<text x="54" y="240" class="heading">Work orders</text>
+<text x="54" y="265" class="body" style="fill:#546475">Find work, review the details, and assign a technician.</text>
+<rect x="50" y="288" width="898" height="565" fill="#ffffff" stroke="#d7e0e8" rx="10"/>
+<rect x="968" y="288" width="420" height="565" fill="#ffffff" stroke="#d7e0e8" rx="10"/>
+<text x="72" y="321" class="heading">Work queue</text>
+<text x="72" y="345" class="small">4 work orders · representative rows shown</text>
+<text x="72" y="373" class="small">Search work orders</text>
+<rect x="72" y="382" width="405" height="36" fill="#ffffff" stroke="#899bac" rx="5"/>
+<text x="85" y="405" class="small">Customer, title or order number</text>
+<text x="490" y="373" class="small">Saved view</text>
+<rect x="490" y="382" width="204" height="36" fill="#ffffff" stroke="#899bac" rx="5"/>
+<text x="503" y="405" class="label">Custom view  ▾</text>
+<rect x="707" y="382" width="216" height="36" fill="#ffffff" stroke="#b5c3cf" rx="5"/>
+<text x="731" y="405" class="label">Save current view</text>
+<rect x="72" y="434" width="124" height="32" fill="#eef4ff" stroke="#92b7ed" rx="5"/>
+<text x="84" y="455" class="label" style="fill:#124ba9">All work  4</text>
+<rect x="204" y="434" width="99" height="32" fill="#fff" stroke="#d7e0e8" rx="5"/>
+<text x="216" y="455" class="label" style="fill:#546475">New  1</text>
+<rect x="311" y="434" width="119" height="32" fill="#fff" stroke="#d7e0e8" rx="5"/>
+<text x="323" y="455" class="label" style="fill:#546475">Waiting  1</text>
+<rect x="438" y="434" width="139" height="32" fill="#fff" stroke="#d7e0e8" rx="5"/>
+<text x="450" y="455" class="label" style="fill:#546475">Scheduled  1</text>
+<rect x="585" y="434" width="106" height="32" fill="#fff" stroke="#d7e0e8" rx="5"/>
+<text x="597" y="455" class="label" style="fill:#546475">Drafts  1</text>
+<rect x="66" y="482" width="866" height="149" fill="#f4f8ff" stroke="#9dbce9" rx="7"/>
+<text x="82" y="508" class="heading">2 work orders selected</text>
+<text x="82" y="528" class="small">All selected work is listed here, including anything outside your current filters.</text>
+<rect x="82" y="540" width="185" height="28" fill="#fff" stroke="#c5d5ea" rx="4"/>
+<text x="92" y="559" class="small">#101 · Acme East    ×</text>
+<rect x="279" y="540" width="212" height="28" fill="#fff" stroke="#c5d5ea" rx="4"/>
+<text x="290" y="559" class="small">#104 · West Studio    ×</text>
+<rect x="82" y="583" width="553" height="33" fill="#fff" stroke="#899bac" rx="5"/>
+<text x="95" y="605" class="label">Lee  ▾</text>
+<rect x="649" y="583" width="267" height="33" fill="#165bce" stroke="none" rx="5"/>
+<text x="710" y="605" class="label" style="fill:#fff">Assign 2 selected</text>
+<text x="73" y="655" class="small">☑  Select all shown</text>
+<text x="73" y="682" class="small">WORK ORDER</text>
+<text x="634" y="682" class="small">STATUS</text>
+<text x="738" y="682" class="small">TECHNICIAN</text>
+<text x="856" y="682" class="small">DUE</text>
+<rect x="51" y="696" width="896" height="85" fill="#f0f6ff" stroke="none" rx="0"/>
+<rect x="51" y="696" width="3" height="85" fill="#165bce" stroke="none" rx="0"/>
+<rect x="73" y="712" width="15" height="15" fill="#165bce" stroke="none" rx="2"/>
+<text x="76" y="724" class="small" style="fill:#fff">✓</text>
+<text x="102" y="718" class="body">Inspection of loading-bay access controller</text>
+<text x="102" y="738" class="body">and related intermittent sensor fault</text>
+<text x="102" y="760" class="small">#101 · Acme East</text>
+<rect x="630" y="708" width="61" height="25" fill="#e7f0ff" stroke="none" rx="5"/>
+<text x="642" y="726" class="small" style="fill:#184f9e">New</text>
+<text x="738" y="726" class="small">Unassigned</text>
+<text x="856" y="726" class="small">Today</text>
+<text x="73" y="806" class="small">☑</text>
+<text x="102" y="806" class="body">Temperature sensor</text>
+<text x="102" y="829" class="small">#104 · West Studio</text>
+<rect x="630" y="792" width="64" height="25" fill="#edf0f4" stroke="none" rx="5"/>
+<text x="642" y="810" class="small">Draft</text>
+<text x="738" y="810" class="small">Unassigned</text>
+<text x="856" y="810" class="small">Unscheduled</text>
+<text x="991" y="321" class="small" style="fill:#165bce">← Back to queue</text>
+<text x="991" y="353" class="small">WORK ORDER #101</text>
+<text x="991" y="383" class="heading">Inspection of loading-bay</text>
+<text x="991" y="410" class="heading">access controller and related</text>
+<text x="991" y="437" class="heading">intermittent sensor fault</text>
+<text x="991" y="479" class="body" style="fill:#546475">Acme East</text>
+<rect x="991" y="495" width="59" height="25" fill="#e7f0ff" stroke="none" rx="5"/>
+<text x="1003" y="513" class="small" style="fill:#184f9e">New</text>
+<text x="991" y="556" class="small">Due</text>
+<text x="1201" y="556" class="small">Technician</text>
+<text x="991" y="581" class="body">Today</text>
+<text x="1201" y="581" class="body">Unassigned</text>
+<text x="991" y="629" class="heading">Assign this work</text>
+<rect x="991" y="643" width="373" height="36" fill="#fff" stroke="#899bac" rx="5"/>
+<text x="1004" y="666" class="label">Choose a technician  ▾</text>
+<rect x="991" y="692" width="373" height="35" fill="#165bce" stroke="none" rx="5"/>
+<text x="1115" y="715" class="label" style="fill:#fff">Assign work order</text>
+<text x="991" y="765" class="heading">History</text>
+<text x="997" y="802" class="body">●  Request received</text>
+<rect x="28" y="901" width="1384" height="122" fill="#fff7e7" stroke="#dfc48b" rx="10"/>
+<text x="49" y="931" class="small" style="fill:#73531c">AFTER ASSIGNMENT</text>
+<text x="49" y="958" class="heading" style="fill:#73531c">1 work order assigned · 1 could not be assigned</text>
+<text x="49" y="985" class="body" style="fill:#73531c">#101: Assigned to Lee · Scheduled. Its history updates and it leaves the selection.</text>
+<text x="49" y="1007" class="body" style="fill:#73531c">#104: Complete the draft before assignment. It stays selected with a clear explanation.</text>
+</svg>
