@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5ef">
+  <title>Reading list · My Reading</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="model.js" defer></script>
+  <script src="reading-state.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to reading list</a>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Reading collection">
+      <a class="brand" href="#reading" aria-label="My Reading home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 4.5c3-1 6-.5 9 1.5 3-2 6-2.5 9-1.5v15c-3-1-6-.5-9 1.5-3-2-6-2.5-9-1.5zM12 6v15"/></svg></span>
+        <span>My Reading<span class="brand-caption">A place for good reads.</span></span>
+      </a>
+      <nav class="navigation" aria-label="Collections">
+        <p class="eyebrow nav-caption">Your collection</p>
+        <a id="active" class="nav-link" href="#reading" aria-current="page">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v17l-7-4-7 4z"/></svg>
+          <span>Reading list</span><span id="active-count" class="nav-count">0</span>
+        </a>
+        <a id="archive" class="nav-link" href="#archive">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18v4H3zM5 8v12h14V8M9 12h6"/></svg>
+          <span>Archive</span><span id="archive-count" class="nav-count">0</span>
+        </a>
+      </nav>
+      <div class="sidebar-note">
+        <span class="storage-dot" id="storage-dot" aria-hidden="true"></span>
+        <p id="storage-status">Saved in this browser</p>
+        <p class="storage-detail">Your list stays on this device.</p>
+      </div>
+    </aside>
+
+    <main id="main" class="workspace" tabindex="-1">
+      <header class="page-header">
+        <div><p class="eyebrow">Make room for a good read</p><h1 id="heading" tabindex="-1">Reading list</h1><p id="view-description" class="description">Books and long articles, ready when you are.</p></div>
+        <button id="open-add" class="button primary" type="button" aria-expanded="false" aria-controls="add-panel"><span aria-hidden="true">＋</span> Add a read</button>
+      </header>
+
+      <section id="storage-warning" class="storage-warning" aria-label="Saving problem" hidden>
+        <p id="storage-message" role="alert"></p><button id="retry-save" class="button secondary" type="button">Retry saving</button>
+      </section>
+
+      <section id="add-panel" class="add-panel" aria-labelledby="add-heading" hidden>
+        <div class="panel-heading"><h2 id="add-heading">Add to your reading list</h2><p>New reads start in “To read”.</p></div>
+        <form id="add" novalidate>
+          <div class="form-fields">
+            <div class="field"><label for="title">Title <span>(required)</span></label><input id="title" name="title" autocomplete="off" required aria-describedby="title-error" placeholder="What would you like to read?"><p id="title-error" class="field-error" role="alert"></p></div>
+            <div class="field"><label for="author">Author <span>(optional)</span></label><input id="author" name="author" autocomplete="off" placeholder="Name or publication"></div>
+          </div>
+          <div class="form-actions"><button class="button primary" type="submit">Add to list</button><button id="cancel-add" class="button quiet" type="button">Cancel</button></div>
+        </form>
+      </section>
+
+      <div id="feedback" class="feedback" hidden><p id="notice" role="status" aria-live="polite" aria-atomic="true"></p><button id="undo" type="button" class="undo-button" hidden>Undo</button></div>
+
+      <section class="collection" aria-labelledby="results-heading">
+        <div class="search-row">
+          <div class="search-field"><label id="search-label" for="search">Search reading list</label><div class="search-control"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="search" type="search" placeholder="Search by title or author" autocomplete="off"><button id="clear-search" type="button" aria-label="Clear search" hidden>×</button></div></div>
+        </div>
+        <div class="filter-row"><div id="status-filters" class="filters" role="group" aria-label="Filter by reading status">
+          <button class="filter" type="button" data-status="all" aria-pressed="true">All <span id="filter-count-all">0</span></button>
+          <button class="filter" type="button" data-status="queued" aria-pressed="false">To read <span id="filter-count-queued">0</span></button>
+          <button class="filter" type="button" data-status="reading" aria-pressed="false">Reading <span id="filter-count-reading">0</span></button>
+          <button class="filter" type="button" data-status="finished" aria-pressed="false">Finished <span id="filter-count-finished">0</span></button>
+        </div><button id="reset-filters" class="text-button" type="button" hidden>Clear filters</button></div>
+        <div class="list-meta"><h2 id="results-heading" tabindex="-1">Your reads</h2><p id="count" role="status" aria-live="polite" aria-atomic="true"></p></div>
+        <div id="cards" class="reading-list"></div>
+        <div id="empty" class="empty-state" hidden>
+          <div class="empty-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM8 8h8M8 12h6M8 16h4"/></svg></div>
+          <h3 id="empty-title"></h3><p id="empty-description"></p><button id="empty-action" class="button secondary" type="button"></button>
+        </div>
+      </section>
+      <footer class="workspace-footer"><span>A little space for everything you want to read.</span><span id="example-note">Starts with example reads.</span></footer>
+      <noscript><p class="storage-warning">Enable JavaScript to add reads, search your collection, and save changes.</p></noscript>
+    </main>
+  </div>
+</body>
+</html>

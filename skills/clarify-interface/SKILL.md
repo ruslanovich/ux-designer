@@ -13,7 +13,7 @@ Read [references/interview.md](references/interview.md) when framing a difficult
 
 Reuse the leader's record and all previous answers. When invoked independently, use the same compact record in the conversation. Add useful fields as needed; do not require JSON, make the user fill a template, or create a document by default. [R05]
 
-- **brief:** goal, audience, platform, scope, constraints.
+- **brief:** goal, audience, platform, requested endpoint, proposed change scope, constraints.
 - **evidence:** id, statement, status, source.
 - **content:** information, objects, and capabilities.
 - **tasks:** trigger, steps, outcome, material exceptions.
@@ -27,9 +27,9 @@ Use evidence statuses `observed`, `reported`, `hypothesis`, `decision`, and `unk
 
 Infer a provisional goal, audience, starting situation, main actions, desired outcome, and material exceptions from the request and materials. Identify platform and scope when known. Mark inferred details as hypotheses. Explain the consequential interpretation briefly so the user can correct it; do not add an approval gate. [R02, R03, R04]
 
-Choose a proportionate scope: a fragment, connected scenarios, or the product's structure. Consider a wider journey when waiting, other channels, or handoffs matter. Translate the user's ordinary language into scenarios and structure yourself. [R03, R10]
+Recommend a proportionate scope: a fragment, connected scenarios, or the product's structure. Keep it separate from whether the user wants an audit, plan, or implementation. Consider a wider journey when waiting, other channels, or handoffs matter. Translate ordinary language into scenarios and structure yourself; do not ask the user to select internal design categories. [R03, R10, R37]
 
-Identify uncertainties that would change the main scenario, required content, structure, or a material constraint. Ask about them in short adaptive rounds. Skip questions whose answers are already available or would not change the work. Do not impose a universal question count or exhaustive questionnaire. [R08]
+Identify uncertainties that would change the main scenario, required content, visual direction, structure, or a material constraint. Inspect accessible facts and research professional guidance through the relevant modules before asking the user to supply them. Keep consequential product decisions with the user. Ask in short adaptive rounds; skip known answers and immaterial questions. Do not impose a universal question count or exhaustive questionnaire. [R08, R40]
 
 ## Obtain facts neutrally
 

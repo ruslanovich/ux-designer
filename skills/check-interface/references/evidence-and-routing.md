@@ -1,14 +1,14 @@
 # Evidence, conclusions, and handoffs
 
-## Match the conclusion to the input — R32, R33, R35
+## Match the conclusion to the input — R32, R33, R35, R41
 
 Use the strongest available evidence for the specific property. Keep a useful partial review when another method is unavailable.
 
 | Input | Inspect | Preserve as unverified |
 | --- | --- | --- |
 | Idea, brief, or content | Inspect the stated outcome, relationships, and consistency of a proposed path. | Keep existing behavior, audience expectations, and execution outcomes unresolved. |
-| Plan or prototype | Inspect represented transitions, required content, and material states. Execute only interactions actually supported. | Keep omitted behavior and production integration unresolved; identify simulated outcomes. |
-| Screenshot | Inspect visible content, labels, grouping, and the pictured state. | Keep unseen states, return behavior, semantic roles, focus, and actual target bounds unresolved. |
+| Plan or prototype | Inspect how the concept addresses the task, its represented content, visual organization, transitions, and material states. Execute only interactions actually supported. | Keep omitted behavior and production integration unresolved; identify simulated outcomes and unrepresented visual choices. |
+| Screenshot | Inspect visible content, labels, grouping, composition, visual hierarchy, component treatment, and the pictured state within the image's quality limits. | Keep unseen states, return behavior, semantic roles, focus, and unmeasured target bounds unresolved. |
 | Code or markup | Inspect represented logic, configuration, and semantics; cite the artifact. | Keep actual behavior in unexecuted conditions unresolved. |
 | Running interface | Observe selected actions and results in stated data, environment, and input conditions. | Keep other conditions and audience-level outcomes unresolved. |
 | Another person's report | Preserve the account with reported evidence status and context. | Keep independent confirmation unresolved until performed. |
@@ -27,13 +27,20 @@ Separate the basis of an expectation:
 
 | Basis | Interpret |
 | --- | --- |
-| Accepted requirement or decision | Compare against adopted intent; flag a contradiction or changed assumption. |
+| Original task or requirement | Check whether the design can support the intended outcome and required capabilities. |
+| Accepted design decision | Compare against adopted intent; flag a contradiction, weak concept, or changed assumption. |
 | WCAG criterion | Apply its exact conditions and scope. Identify the criterion; do not claim complete conformance from a subset. |
 | Understanding, COGA, or APG | Use the informative explanation or pattern with its conditions. Do not label it an additional normative criterion. |
 | Platform guidance | Establish platform, component role, and applicability. Treat a justified alternative as a design question rather than an automatic failure. |
 | Our process | Use it to organize verification and handoffs. Do not attribute its exact steps or status schema to an external standard. |
 
 Report the observed result and important uncertainty. Do not infer universal usability, audience comprehension, conversion gains, or complete accessibility from expert review or an agent walkthrough. Do not call successful compilation, a screenshot, or one automated result proof of user-task success.
+
+## Address a professional evidence question — R40
+
+Use `research-interface` when a consequential recommendation is poorly covered, sources conflict, or a check depends on current platform guidance. Pass the specific question, relevant artifact, task conditions, and decision it could change. Reuse sources already read when they remain applicable.
+
+Distinguish a source's recommendation from evidence that this product has a problem. A source may support a conditional expert finding or suggest a check; it does not demonstrate this audience's behavior. If browsing is unavailable, qualify the affected conclusion and continue the useful review. Keep product-specific audience questions separate from this desk research.
 
 ## Address a remaining audience question — R34
 
@@ -55,9 +62,10 @@ Use [Card Sorting vs. Tree Testing](https://www.nngroup.com/articles/card-sortin
 | Cause | Next owner | Pass |
 | --- | --- | --- |
 | An unknown goal, audience condition, or required content changes the expected outcome | clarify-interface | Pass the single material question, existing evidence, and affected decision. |
-| Organization or sequence cannot support the task, or a material state was never designed | plan-interface | Pass the broken step, expected outcome, constraint, and dependency. |
+| Structure, interaction, or visual organization cannot support the task, or a material state was never designed | plan-interface | Pass the problem in the chosen concept, expected outcome, constraint, and dependency. |
 | Intended behavior is clear but implementation differs | build-interface | Pass expected versus observed behavior, reproduction conditions, and relevant decision. |
 | A particular artifact, state, or observation is missing | inspect-interface | Pass the precise missing material and the question it would resolve. |
+| Professional guidance is insufficient or conflicting, or a current platform detail matters | research-interface | Pass the question, task conditions, existing sources, and affected decision. |
 
 Retain shared next fields: owner, question/action, and reason. Carry brief, evidence, content, tasks, decisions, and checks only as needed for continuity. Keep the full contract with design-interface; do not create a second required schema here.
 

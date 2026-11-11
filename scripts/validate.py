@@ -22,7 +22,7 @@ CATALOG = "ux-designer-marketplace"
 SCHEMA = "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json"
 LEAD = "design-interface"
 SPECIALISTS = (
-    "inspect-interface", "clarify-interface", "plan-interface",
+    "inspect-interface", "clarify-interface", "research-interface", "plan-interface",
     "build-interface", "check-interface",
 )
 SKILLS = (LEAD, *SPECIALISTS)
@@ -202,6 +202,11 @@ class Validator:
                 self.error(path, "owner must be an object with name")
             else:
                 self.string(path, owner.get("name"), "owner.name")
+            metadata = data.get("metadata", {})
+            if not isinstance(metadata, dict):
+                self.error(path, "metadata must be an object")
+            elif "version" in metadata and metadata["version"] != version:
+                self.error(path, "marketplace metadata version must match root plugin.json")
         entries = data.get("plugins")
         if not isinstance(entries, list) or len(entries) != 1 or not isinstance(entries[0], dict):
             self.error(path, "plugins must contain exactly one plugin object")
@@ -359,7 +364,7 @@ class Validator:
             return
         modules = result["modules"]
         if set(modules) != set(SPECIALISTS):
-            self.error(helper, "module locator must resolve exactly the five specialists")
+            self.error(helper, f"module locator must resolve exactly the {len(SPECIALISTS)} specialists")
         for name in SPECIALISTS:
             value = modules.get(name)
             expected = (self.root / "skills" / name / "SKILL.md").resolve()
@@ -381,7 +386,7 @@ class Validator:
         self.marketplace(".agents/plugins/marketplace.json", version, codex=True)
         actual = {path.parent.name for path in (self.root / "skills").glob("*/SKILL.md")}
         if actual != set(SKILLS):
-            self.error(self.root / "skills", f"expected exactly six skills; found {sorted(actual)}")
+            self.error(self.root / "skills", f"expected exactly {len(SKILLS)} skills; found {sorted(actual)}")
         for name in SKILLS:
             self.skill(name)
         self.hygiene()

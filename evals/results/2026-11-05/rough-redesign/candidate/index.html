@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f0">
+  <title>My Reading — Your personal reading list</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="model.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to reading list</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#reading-list" aria-label="My Reading home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 8.5C12.3 5.3 6.2 5.3 3 6.5v19c4.4-1.7 9.6-1.1 13 1.5m0-18.5c3.7-3.2 9.8-3.2 13-2v19c-4.4-1.7-9.6-1.1-13 1.5m0-18.5V27" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <span>My Reading<span class="brand-dot">.</span></span>
+      </a>
+      <span class="header-note">A little space for your curiosity</span>
+    </div>
+  </header>
+  <main id="main" class="shell" tabindex="-1">
+    <nav class="collection-nav" aria-label="Your collection">
+      <a id="active" href="#reading-list" aria-current="page">Reading list <span id="active-count" class="nav-count">0</span></a>
+      <a id="archive" href="#archive">Archive <span id="archive-count" class="nav-count">0</span></a>
+    </nav>
+    <section class="page-intro" aria-labelledby="heading">
+      <div>
+        <p class="eyebrow">YOUR PERSONAL SHELF</p>
+        <h1 id="heading" tabindex="-1">Your reading list<span class="heading-dot">.</span></h1>
+        <p id="intro-text">Books, articles, and ideas worth coming back to.</p>
+      </div>
+      <a id="add-shortcut" class="add-shortcut" href="#add-title"><span aria-hidden="true">＋</span> Add a read</a>
+    </section>
+    <p id="storage-notice" class="storage-notice" role="alert" hidden></p>
+    <div class="workspace">
+      <section class="collection" aria-label="Saved reads">
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="m15.5 15.5 4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          <label id="search-label" for="search" class="visually-hidden">Search titles or authors in your reading list</label>
+          <input id="search" type="search" placeholder="Search titles or authors" autocomplete="off">
+          <button id="clear-search" type="button" class="clear-search" aria-label="Clear search" hidden>×</button>
+        </div>
+        <div id="filters" class="filters" role="group" aria-label="Filter by reading status">
+          <button type="button" data-filter="all" aria-pressed="true">All <span id="filter-all">0</span></button>
+          <button type="button" data-filter="queued" aria-pressed="false">To read <span id="filter-queued">0</span></button>
+          <button type="button" data-filter="reading" aria-pressed="false">Reading <span id="filter-reading">0</span></button>
+          <button type="button" data-filter="finished" aria-pressed="false">Finished <span id="filter-finished">0</span></button>
+        </div>
+        <div class="list-caption"><p id="count" role="status" aria-live="polite" aria-atomic="true"></p><span id="list-hint">One good read at a time</span></div>
+        <ul id="cards" class="reading-items" aria-label="Reading list"></ul>
+        <div id="empty-state" class="empty-state" hidden>
+          <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M10 8h24a4 4 0 0 1 4 4v29H14a5 5 0 0 1-5-5V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.8"/><path d="M9 35a5 5 0 0 1 5-5h24M17 8v13l5-3 5 3V8" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <h2 id="empty-title"></h2>
+          <p id="empty-description"></p>
+          <button id="empty-action" type="button" class="button secondary"></button>
+        </div>
+        <div id="feedback" class="feedback" hidden>
+          <p id="feedback-text" role="status" aria-live="polite" aria-atomic="true"></p>
+          <button id="undo" type="button" hidden>Undo</button>
+        </div>
+      </section>
+      <aside class="add-panel" aria-labelledby="add-title">
+        <div class="panel-decoration" aria-hidden="true"><span></span><span></span><span></span><i>Keep a good idea close.</i></div>
+        <div class="panel-content">
+          <p class="eyebrow">SOMETHING CAUGHT YOUR EYE?</p>
+          <h2 id="add-title">Save your next read</h2>
+          <p class="panel-intro">A title is all you need to get started.</p>
+          <form id="add" novalidate>
+            <div class="field">
+              <label for="title">Title <span class="required-note">(required)</span></label>
+              <input id="title" name="title" required placeholder="Book or article title" aria-describedby="notice" autocomplete="off">
+              <p id="notice" class="field-error" role="alert" hidden></p>
+            </div>
+            <div class="field">
+              <label for="author">Author <span class="optional-note">(optional)</span></label>
+              <input id="author" name="author" placeholder="Author’s name" autocomplete="off">
+            </div>
+            <button class="button primary" type="submit"><span aria-hidden="true">＋</span> Add to list</button>
+          </form>
+          <div class="save-note"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2.5 16 5v5c0 3.5-6 7-6 7s-6-3.5-6-7V5l6-2.5Z" stroke="currentColor" stroke-width="1.3"/><path d="m7 9.5 2 2 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg><p id="save-status">Saved on this device.<br><span>Your list stays in this browser.</span></p></div>
+        </div>
+      </aside>
+    </div>
+    <footer class="site-footer"><span>My Reading</span><p>Make time for what interests you.</p></footer>
+  </main>
+  <noscript><p class="noscript">JavaScript is needed to add reads, search, and update your list.</p></noscript>
+</body>
+</html>

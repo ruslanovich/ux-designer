@@ -1,7 +1,7 @@
 interface:
   display_name: "Build Interface"
-  short_description: "Implement the chosen interface structure and behavior"
-  default_prompt: "Use $build-interface to implement the prepared interface plan."
+  short_description: "Complete the chosen interface design and redesign"
+  default_prompt: "Use $build-interface to implement the chosen interface design, including visual direction and behavior."
   icon_small: "assets/icon.svg"
   icon_large: "assets/icon.svg"
 
